@@ -1,33 +1,47 @@
-# Finder file-sorting screen recording
+# Finder batch-sorting screen recording
 
-The README shows a real Finder run from September 18, 2026 through Vercel AI Gateway. Jev sorts **nine fictional text files into Invoices, Receipts, and Reports in 22.693 seconds**. All nine destinations and original SHA-256 content hashes pass an independent filesystem check, with no loose files or extras. The verifier ignores Finder's `.DS_Store` metadata.
+The README shows a real Finder run from September 18, 2026 through Vercel AI Gateway. Jev sorts **nine fictional text files in three group moves in 7.387 seconds**. All nine destinations and original SHA-256 content hashes pass an independent filesystem check, with no loose files or extras. The verifier ignores Finder's `.DS_Store` metadata.
 
-The preparation script creates the dummy files and empty destination folders. Finder is opened in list view, sorted by Name, before the timed task. For each visible filename, Jev chooses among all three destinations. Native mouse input performs every move; the sorting loop never uses filesystem rename/move calls. The expected manifest and file contents are unavailable to the decision policy.
+The preparation script creates the dummy files and three empty destination folders. Finder is opened in list view, sorted by Name, before the timed task. Jev classifies all nine visible filenames in one request containing nine finite-choice questions. The runner groups those answers by destination, selects each exact group through macOS accessibility, and performs one native mouse drag per group. A second Jev request confirms completion. File grouping follows Jev's answers, not a hardcoded prefix classifier. The sorting loop never uses filesystem rename/move calls, and cannot read the expected manifest or file contents.
 
-The native worker checks both drag endpoints against the selected Finder window and approved folder. It rejects multiple selections, stale frames, changed item identities, moved bounds, and covered targets. A read-only preflight may reject a changed screen and request a fresh observation before any input. An uncertain or failed drag itself is never replayed. The harness waits 1.2 seconds after each drop and requires consecutive observations to agree on row positions; these waits are included in the timer.
+Every group member and destination must be a direct item in the approved Finder directory. After selecting a group, the runner takes a fresh observation and rebinds all element IDs. The native worker rechecks identities, focus, occlusion, bounds, and the complete selected-file set before dragging. An extra selected item rejects the drag. Unexpected visible files, uncertain decisions, and selection/input failures stop the run; selection and drag mutations are never replayed. The existing single-file guard still rejects multiple selections.
+
+The runner retains a 1.2-second settling wait after each drop, now only three times rather than nine. It confirms every group member has disappeared from the source listing before proceeding. Those waits and the independent final file checks are included in the timer.
+
+## Recorded comparison
+
+| Same nine-file task            | Individual moves | Group moves |
+| ------------------------------ | ---------------: | ----------: |
+| Verified elapsed time          |         22.693 s |     7.387 s |
+| Native drags                   |                9 |           3 |
+| Jev requests                   |               10 |           2 |
+| Fixed settling waits           |           10.8 s |       3.6 s |
+| Correct files, original hashes |              9/9 |         9/9 |
+
+The batch version took about one third of the time in these recordings. Its first complete trial passed in 7.508 seconds; the recorded trial passed in 7.387 seconds. These are functional demonstrations, not a broad reliability study or controlled latency benchmark. The earlier single-file recording remains available as [MP4](media/jev-finder-demo.mp4), [trace](evidence/finder-recording-trace.json), and [capture evidence](evidence/finder-recording.json).
 
 ## Recording and timer
 
 Screen Studio 3.7.5's bundled recorder captures **only the Finder window** at 1840 × 1708. The sidebar and path bar are hidden. The capture excludes the desktop, other apps, camera, microphone, system audio, and keyboard recording. All filenames and contents are fictional. The exports have no audio stream.
 
-The timer is composited from the recorder's start timestamp and the harness's measured elapsed duration. It starts after model warmup and stops only after the independent verification. It includes perception, all ten Jev decisions, native input, Finder settling time, and the final file checks. It is an annotation added during export, not a clock built into Finder.
+The timer is composited from the recorder's start timestamp and the harness's measured elapsed duration. It starts after model warmup and stops only after the independent verification. It includes perception, both Jev requests, native selection and input, Finder settling time, and the final file checks. It is an annotation added during export, not a clock built into Finder.
 
-The 30-second export contains the first 24 seconds without cuts or speed changes, followed by seconds 35–41 of the original capture. Only an idle gap **after verification** is removed. The final segment is labeled result inspection: the operator expands the three folders to reveal all nine files after the timed task. Unused lower rows and the status bar are cropped; task rows remain visible. MP4 is 30 fps; the looping README GIF is 920 pixels wide at 15 fps.
+The 15-second export contains the first nine seconds without cuts or speed changes, followed by seconds 16–22 of the original capture. Only an idle gap **after verification** is removed. The final segment is labeled result inspection: the operator expands the folders to reveal all nine files after the timed task. Unused lower rows and the status bar are cropped; all task rows remain visible. MP4 is 30 fps; the looping README GIF is 920 pixels wide at 15 fps.
 
-- [Finder MP4](media/jev-finder-demo.mp4)
-- [Finder GIF](media/jev-finder-demo.gif)
-- [Decision and independent verification trace](evidence/finder-recording-trace.json)
-- [Capture timing, editing details, and source/export hashes](evidence/finder-recording.json)
+- [Batch Finder MP4](media/jev-finder-batch-demo.mp4)
+- [Batch Finder GIF](media/jev-finder-batch-demo.gif)
+- [Batch decisions and independent verification trace](evidence/finder-batch-recording-trace.json)
+- [Capture timing, editing details, and source/export hashes](evidence/finder-batch-recording.json)
 - [Fictional input manifest and content hashes](evidence/finder-manifest.json)
 
-Development trials exposed stale row positions and dropped drag events; those trials stopped and are not shown. The final version passed two consecutive complete runs, in 22.439 and 22.693 seconds. These are functional demonstrations, not broad reliability evidence.
+Offline tests cover classification batching, noncontiguous groups, uncertain decisions, changing element IDs, unexpected files, missed moves, and non-retry behavior. Live native checks also rejected stale frames, outside-root targets, duplicate members, folders used as files, and a group whose selection did not match. The two complete batch trials passed all destination and hash checks.
 
 ## Record the Finder demo yourself
 
 1. Complete the README setup and provider/desktop checks.
 2. Run `npm run demo:finder -- --prepare`. It prints a unique temporary root and manifest path.
 3. Open that root in exactly one Finder window. Use list view sorted by Name, collapse all three folders, and hide the sidebar and path bar. Inspect the window for private content.
-4. Run `npm run demo:finder -- --manifest /absolute/path/to/manifest.json`. It loads the model, focuses Finder, prints the window ID and artifact directory, then waits for Enter.
+4. Run `npm run demo:finder -- --manifest /absolute/path/to/manifest.json`. It loads the model, focuses Finder, prints the window ID and artifact directory, then waits for Enter. Batch mode is the default; `--single` reproduces individual moves.
 5. Select that specific Finder window in Screen Studio, with camera/audio/keyboard recording off. Begin recording, dismiss the picker, and press Enter in the waiting terminal. Leave mouse and keyboard idle until the process exits.
 6. Require exit 0 and `passed: true`. The artifact directory contains `trace.json` and per-step `steps.jsonl`. After verification, expand the folders for a clear result inspection and stop recording. Inspect failed runs before preparing a new dataset; the harness will not rerun a partially sorted folder.
 
@@ -35,10 +49,10 @@ For a raw capture from Screen Studio's bundled recorder, `scripts/render-finder-
 
 ```sh
 python3 scripts/render-finder-demo.py /path/to/raw-capture /path/to/trace.json \
-  --inspection-start 35 --inspection-duration 6
+  --inspection-start 16 --inspection-duration 6 --output docs/media/jev-finder-batch-demo
 ```
 
-The exporter refuses an unverified trace, audio-containing source, or an inspection edit that cuts into the timed task. Review the crop and every exported frame before publishing. Local recordings remain outside Git; only reviewed exports and sanitized evidence belong in the repository.
+The exporter refuses an unverified trace, audio-containing source, or an inspection edit that cuts into the timed task. Review the crop and exported frames before publishing. Local recordings remain outside Git; only reviewed exports and sanitized evidence belong in the repository.
 
 ## Earlier settings demo
 

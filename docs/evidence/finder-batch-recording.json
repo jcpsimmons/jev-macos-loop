@@ -1,0 +1,112 @@
+{
+  "recordedAt": 1789750424950,
+  "provider": "vercel",
+  "passed": true,
+  "verifiedElapsedMs": 7386.954665999998,
+  "timerOffsetSeconds": 0.037184326171875,
+  "recorder": "Screen Studio 3.7.5 bundled polyrecorder 2.7.0",
+  "captureScope": "One Finder window containing only fictional test files; sidebar and path bar hidden",
+  "sourceWidth": 1840,
+  "sourceHeight": 1708,
+  "cropHeight": 700,
+  "audioStreams": 0,
+  "camera": false,
+  "keyboardCapture": false,
+  "speedMultiplier": 1,
+  "timer": "Composited from recorded start timestamp and independently verified elapsed duration; warmup excluded",
+  "segmentsSeconds": [
+    [
+      0,
+      9
+    ],
+    [
+      16.0,
+      22.0
+    ]
+  ],
+  "editing": "Uninterrupted normal-speed timed run; idle gap after verification removed before operator-expanded folder inspection",
+  "exports": [
+    {
+      "file": "docs/media/jev-finder-batch-demo.mp4",
+      "sha256": "b26d8ae7320bf4148f4b48ed172cc4f77223b20d17b73bde4c9a025b0a43d872"
+    },
+    {
+      "file": "docs/media/jev-finder-batch-demo.gif",
+      "sha256": "19bcb6c0f178807344b73e17a6f100cc7fa60a740fa2a553994e029d4125617c"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "file": "channel-0-window-0-0000.mp4",
+      "sha256": "db6a76f2d69de5dbc333fff5cccaf886bae754d0a46e6b5e1ccdf36432d432d2"
+    },
+    {
+      "file": "channel-0-window-0-0001.m4s",
+      "sha256": "66404d4d9313ca5f81abeae991bfb24e35a076260470e2545d3c115928ffa1ec"
+    },
+    {
+      "file": "channel-0-window-0-0002.m4s",
+      "sha256": "128fcb87f0f2ed50910f50326d2b4ff1d2e7c4c5994a2b66f389e42208060bdf"
+    },
+    {
+      "file": "channel-0-window-0-0003.m4s",
+      "sha256": "470ef5832c081169db794b2308d50f0714317224fe33f5868d594703f1bc86de"
+    },
+    {
+      "file": "channel-0-window-0-0004.m4s",
+      "sha256": "4ce73b63406f165acfeb3d2f206d943a4ee3a0f150fbf4888e310c56e13cd928"
+    },
+    {
+      "file": "channel-0-window-0-0005.m4s",
+      "sha256": "ef26d3abe4d19dd5623424847569d08f203bfca92dd4c6b0eb99a50172aa3bbc"
+    },
+    {
+      "file": "channel-0-window-0-0006.m4s",
+      "sha256": "97bd4dedd6dc8a5d26fadb95432a00db0a40c0c5a7f5ba8ba9a6ed6c1a770b54"
+    },
+    {
+      "file": "channel-0-window-0-0007.m4s",
+      "sha256": "929252c9ac0b1f50fd62e8baa27442c62c7981c8d8ab8b4ab207bc52618cfd4b"
+    },
+    {
+      "file": "channel-0-window-0-0008.m4s",
+      "sha256": "abaf3645046467d80f5e3dcdad887bf783584084750c7ad7c4ab16f71d6138b7"
+    },
+    {
+      "file": "channel-0-window-0-0009.m4s",
+      "sha256": "b52b16acc1f80c54915ea6ba8521a560873d73f1b5e8a19a0ab23c55d078449c"
+    },
+    {
+      "file": "channel-0-window-0-0010.m4s",
+      "sha256": "f8021aecea35c0b47a61d484d561b40a61111e126a5f33590e45a73a7628af7a"
+    },
+    {
+      "file": "channel-0-window-0-0011.m4s",
+      "sha256": "f581e0bc99a24762287ec9753aacc83c847a43510aaf00adfa992ccaed8392ef"
+    },
+    {
+      "file": "channel-0-window-0-0012.m4s",
+      "sha256": "cb1c2efc900c3dbb3ecd653606d179489f31be87607b79eb3f5c0a38837fc989"
+    },
+    {
+      "file": "channel-0-window-0-0013.m4s",
+      "sha256": "b58e973d2240d6eb72c056f9b94ddcf24fb11edc0287e946a052aa322f7f691b"
+    },
+    {
+      "file": "channel-0-window-0-0014.m4s",
+      "sha256": "14e10e57467775f63e66afcdf0effef944dac0f1e3407a564329ffb3cee6217b"
+    },
+    {
+      "file": "channel-0-window-0-changes.json",
+      "sha256": "f8969abe579145b0013fada7e1d5d133cc5b8e9687b772041400754fd3e7bbf3"
+    },
+    {
+      "file": "channel-0-window-0.m3u8",
+      "sha256": "62b5c6d7bdd1665ac6b05d8a55f7b5a9a2413acb1ebb66750a3776a4fefd2e53"
+    },
+    {
+      "file": "metadata.json",
+      "sha256": "192acb1c8595f21291558c84ba497c7d9f1f1c3704cdf523d48e35f50c02d032"
+    }
+  ]
+}

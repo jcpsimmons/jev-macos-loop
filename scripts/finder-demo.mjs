@@ -15,6 +15,7 @@ import os from "node:os";
 import { Native } from "../src/native.mjs";
 import { requireCredential } from "../src/providers.mjs";
 import { runFinder } from "../src/finder.mjs";
+import { runFinderBatch } from "../src/finder-batch.mjs";
 
 const repo = path.resolve(import.meta.dirname, "..");
 const folders = ["Invoices", "Receipts", "Reports"];
@@ -140,7 +141,8 @@ if (process.argv.includes("--prepare")) {
     await native.send({ op: "focus" });
     const startedAt = Date.now(),
       start = performance.now();
-    const outcome = await runFinder({
+    const mode = process.argv.includes("--single") ? "single" : "batch";
+    const outcome = await (mode === "batch" ? runFinderBatch : runFinder)({
       native,
       root,
       folderNames: folders,
@@ -184,6 +186,7 @@ if (process.argv.includes("--prepare")) {
       totalFiles === 9 &&
       actual.every((file) => file.passed);
     const result = {
+      mode,
       passed,
       startedAt,
       verifiedElapsedMs: performance.now() - start,

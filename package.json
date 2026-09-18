@@ -8,7 +8,7 @@
     "test": "node --test",
     "start": "node src/cli.mjs",
     "benchmark": "node scripts/benchmark.mjs",
-    "check": "node --check src/cli.mjs && node --check src/decide.mjs && node --check src/loop.mjs && node --check src/native.mjs && node --check src/providers.mjs && node --check scripts/record-demo.mjs && node --check src/finder.mjs && node --check scripts/finder-demo.mjs",
+    "check": "node --check src/cli.mjs && node --check src/decide.mjs && node --check src/loop.mjs && node --check src/native.mjs && node --check src/providers.mjs && node --check scripts/record-demo.mjs && node --check src/finder.mjs && node --check scripts/finder-demo.mjs && node --check src/finder-batch.mjs",
     "check:provider": "node scripts/check-provider.mjs",
     "record:demo": "node scripts/record-demo.mjs",
     "demo:finder": "node scripts/finder-demo.mjs"

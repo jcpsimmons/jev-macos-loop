@@ -491,7 +491,7 @@ final class Engine {
       "clicked": element.id, "label": element.label, "point": [point.x, point.y], "actionMs": ms(start),
     ]
   }
-  func validateDrag(_ command: [String: Any]) throws -> (Element, CGPoint, Element, CGPoint) {
+  func validateDrag(_ command: [String: Any], checkSelection: Bool = true) throws -> (Element, CGPoint, Element, CGPoint) {
     let (sourceElement, from) = try validatedTarget(command, key: "source")
     let (destination, to) = try validatedTarget(command, key: "destination")
     guard window?.owningApplication?.bundleIdentifier == "com.apple.finder",
@@ -505,6 +505,7 @@ final class Engine {
       sourceURL.deletingLastPathComponent().standardizedFileURL.path == URL(fileURLWithPath: root).standardizedFileURL.path,
       destinationURL.deletingLastPathComponent().standardizedFileURL.path == URL(fileURLWithPath: root).standardizedFileURL.path
     else { throw error("Drag requires two direct Finder items in the approved folder") }
+    if !checkSelection { return (sourceElement, from, destination, to) }
     // A Finder drag can otherwise move every selected row, not just its source.
     var ancestor: AXUIElement? = sourceAX
     var checkedSelection = false
@@ -522,8 +523,94 @@ final class Engine {
     guard checkedSelection else { throw error("Cannot verify Finder selection") }
     return (sourceElement, from, destination, to)
   }
+  func ancestor(_ element: AXUIElement, role: String) -> AXUIElement? {
+    var node: AXUIElement? = element
+    for _ in 0..<8 {
+      guard let current = node else { return nil }
+      if str(current, kAXRoleAttribute) == role { return current }
+      node = attr(current, kAXParentAttribute).map { $0 as! AXUIElement }
+    }
+    return nil
+  }
+  func rowURL(_ row: AXUIElement, depth: Int = 0) -> String? {
+    if let url = attr(row, kAXURLAttribute) as? URL { return url.absoluteString }
+    if depth >= 4 { return nil }
+    for child in attr(row, kAXChildrenAttribute) as? [AXUIElement] ?? [] {
+      if let url = rowURL(child, depth: depth + 1) { return url }
+    }
+    return nil
+  }
+  func selectedURLs(_ outline: AXUIElement) throws -> Set<String> {
+    guard let selected = attr(outline, kAXSelectedRowsAttribute) as? [AXUIElement] else {
+      throw error("Cannot read Finder selection")
+    }
+    let urls = selected.compactMap { rowURL($0) }
+    guard urls.count == selected.count, Set(urls).count == urls.count else {
+      throw error("Cannot identify every selected Finder item")
+    }
+    return Set(urls)
+  }
+  func validateBatch(_ command: [String: Any], checkSelection: Bool = false) throws
+    -> ([(Element, CGPoint)], Element, CGPoint, AXUIElement) {
+    guard let ids = command["sources"] as? [String], !ids.isEmpty, ids.count <= 40,
+      Set(ids).count == ids.count else { throw error("Invalid Finder batch") }
+    var sources: [(Element, CGPoint)] = []
+    var list: AXUIElement?
+    var destination: Element?
+    var destinationPoint = CGPoint.zero
+    for id in ids {
+      var single = command
+      single["source"] = id
+      let (element, point, target, to) = try validateDrag(single, checkSelection: false)
+      guard let ax = element.ax, let outline = ancestor(ax, role: "AXOutline"),
+        let targetAX = target.ax, let targetOutline = ancestor(targetAX, role: "AXOutline"),
+        CFEqual(outline, targetOutline), list == nil || CFEqual(list!, outline)
+      else { throw error("Batch items must share the same Finder list") }
+      list = outline
+      destination = target
+      destinationPoint = to
+      sources.append((element, point))
+    }
+    guard Set(sources.map { $0.0.itemURL }).count == sources.count else {
+      throw error("Duplicate Finder batch items")
+    }
+    if checkSelection {
+      guard try selectedURLs(list!) == Set(sources.map { $0.0.itemURL }) else {
+        throw error("Finder selection does not exactly match the planned batch")
+      }
+    }
+    return (sources, destination!, destinationPoint, list!)
+  }
+  func selectFiles(_ command: [String: Any]) throws -> [String: Any] {
+    let (sources, _, _, outline) = try validateBatch(command)
+    let rows = sources.compactMap { $0.0.ax.flatMap { ancestor($0, role: "AXRow") } }
+    var settable: DarwinBoolean = false
+    guard rows.count == sources.count,
+      AXUIElementIsAttributeSettable(outline, kAXSelectedRowsAttribute as CFString, &settable) == .success,
+      settable.boolValue else { throw error("Finder batch selection is unavailable") }
+    // One native accessibility selection replaces the entire selection atomically.
+    // It never touches the filesystem or relies on shift-click range assumptions.
+    capturedFreshFrame = false
+    guard AXUIElementSetAttributeValue(outline, kAXSelectedRowsAttribute as CFString, rows as CFArray) == .success
+    else { throw error("Finder batch selection failed; inspect before retrying") }
+    let expected = Set(sources.map { $0.0.itemURL })
+    for _ in 0..<30 {
+      if try selectedURLs(outline) == expected {
+        requireFrameAfter = CACurrentMediaTime() + 0.02
+        return ["selected": sources.map { $0.0.value }, "count": sources.count]
+      }
+      Thread.sleep(forTimeInterval: 0.01)
+    }
+    throw error("Finder did not confirm the exact batch selection")
+  }
   func drag(_ command: [String: Any]) throws -> [String: Any] {
-    let (sourceElement, from, destination, to) = try validateDrag(command)
+    let sourceElement: Element, from: CGPoint, destination: Element, to: CGPoint
+    if command["sources"] != nil {
+      let (sources, target, point, _) = try validateBatch(command, checkSelection: true)
+      (sourceElement, from, destination, to) = (sources[0].0, sources[0].1, target, point)
+    } else {
+      (sourceElement, from, destination, to) = try validateDrag(command)
+    }
     let eventSource = CGEventSource(stateID: .hidSystemState)
     guard let down = CGEvent(mouseEventSource: eventSource, mouseType: .leftMouseDown,
       mouseCursorPosition: from, mouseButton: .left),
@@ -596,6 +683,10 @@ final class Engine {
         case "observe": result = try await engine.observe()
         case "click": result = try engine.execute(command)
         case "drag": result = try engine.drag(command)
+        case "select-files": result = try engine.selectFiles(command)
+        case "validate-batch":
+          _ = try engine.validateBatch(command)
+          result = ["valid": true]
         case "validate-drag":
           _ = try engine.validateDrag(command)
           result = ["valid": true]

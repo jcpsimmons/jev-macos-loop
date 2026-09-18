@@ -1,0 +1,218 @@
+{
+  "mode": "batch",
+  "passed": true,
+  "startedAt": 1789750424950,
+  "verifiedElapsedMs": 7386.954665999998,
+  "provider": "vercel",
+  "actual": [
+    {
+      "name": "report_quarterly.txt",
+      "folder": "Reports",
+      "passed": true
+    },
+    {
+      "name": "invoice_orion.txt",
+      "folder": "Invoices",
+      "passed": true
+    },
+    {
+      "name": "receipt_coffee.txt",
+      "folder": "Receipts",
+      "passed": true
+    },
+    {
+      "name": "invoice_atlas.txt",
+      "folder": "Invoices",
+      "passed": true
+    },
+    {
+      "name": "report_inventory.txt",
+      "folder": "Reports",
+      "passed": true
+    },
+    {
+      "name": "receipt_train.txt",
+      "folder": "Receipts",
+      "passed": true
+    },
+    {
+      "name": "report_weekly.txt",
+      "folder": "Reports",
+      "passed": true
+    },
+    {
+      "name": "receipt_supplies.txt",
+      "folder": "Receipts",
+      "passed": true
+    },
+    {
+      "name": "invoice_borealis.txt",
+      "folder": "Invoices",
+      "passed": true
+    }
+  ],
+  "rootOnlyFolders": true,
+  "totalFiles": 9,
+  "status": "done",
+  "trace": [
+    {
+      "phase": "classify",
+      "status": "planned",
+      "groups": [
+        {
+          "destination": "Invoices",
+          "files": [
+            "invoice_atlas.txt",
+            "invoice_borealis.txt",
+            "invoice_orion.txt"
+          ]
+        },
+        {
+          "destination": "Receipts",
+          "files": [
+            "receipt_coffee.txt",
+            "receipt_supplies.txt",
+            "receipt_train.txt"
+          ]
+        },
+        {
+          "destination": "Reports",
+          "files": [
+            "report_inventory.txt",
+            "report_quarterly.txt",
+            "report_weekly.txt"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "file": "invoice_atlas.txt",
+          "choice": "e21",
+          "probability": 1
+        },
+        {
+          "file": "invoice_borealis.txt",
+          "choice": "e21",
+          "probability": 1
+        },
+        {
+          "file": "invoice_orion.txt",
+          "choice": "e21",
+          "probability": 1
+        },
+        {
+          "file": "receipt_coffee.txt",
+          "choice": "e26",
+          "probability": 1
+        },
+        {
+          "file": "receipt_supplies.txt",
+          "choice": "e26",
+          "probability": 1
+        },
+        {
+          "file": "receipt_train.txt",
+          "choice": "e26",
+          "probability": 1
+        },
+        {
+          "file": "report_inventory.txt",
+          "choice": "e31",
+          "probability": 1
+        },
+        {
+          "file": "report_quarterly.txt",
+          "choice": "e31",
+          "probability": 1
+        },
+        {
+          "file": "report_weekly.txt",
+          "choice": "e31",
+          "probability": 1
+        }
+      ],
+      "decisionMs": 475.9758330000004,
+      "provider": "vercel",
+      "model": "typesafe-ai/jev",
+      "elapsedMs": 544.0784999999996
+    },
+    {
+      "phase": "move-group",
+      "files": [
+        "invoice_atlas.txt",
+        "invoice_borealis.txt",
+        "invoice_orion.txt"
+      ],
+      "destination": "Invoices",
+      "selected": {
+        "count": 3,
+        "selected": [
+          "invoice_atlas.txt",
+          "invoice_borealis.txt",
+          "invoice_orion.txt"
+        ]
+      },
+      "action": {
+        "actionMs": 721.1079597473145,
+        "destination": "e21",
+        "dragged": "e17"
+      },
+      "elapsedMs": 2711.581624999999
+    },
+    {
+      "phase": "move-group",
+      "files": [
+        "receipt_coffee.txt",
+        "receipt_supplies.txt",
+        "receipt_train.txt"
+      ],
+      "destination": "Receipts",
+      "selected": {
+        "count": 3,
+        "selected": [
+          "receipt_coffee.txt",
+          "receipt_supplies.txt",
+          "receipt_train.txt"
+        ]
+      },
+      "action": {
+        "actionMs": 698.5180377960205,
+        "destination": "e23",
+        "dragged": "e20"
+      },
+      "elapsedMs": 4836.850666000002
+    },
+    {
+      "phase": "move-group",
+      "files": [
+        "report_inventory.txt",
+        "report_quarterly.txt",
+        "report_weekly.txt"
+      ],
+      "destination": "Reports",
+      "selected": {
+        "count": 3,
+        "selected": [
+          "report_inventory.txt",
+          "report_quarterly.txt",
+          "report_weekly.txt"
+        ]
+      },
+      "action": {
+        "actionMs": 694.4320201873779,
+        "destination": "e26",
+        "dragged": "e22"
+      },
+      "elapsedMs": 6965.148375000001
+    },
+    {
+      "phase": "complete",
+      "status": "done",
+      "choice": "DONE",
+      "probability": 0.99,
+      "decisionMs": 384.2903750000005,
+      "elapsedMs": 7382.499666
+    }
+  ],
+  "elapsedMs": 7383.331208
+}

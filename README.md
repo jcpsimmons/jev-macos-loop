@@ -1,8 +1,8 @@
 # Jev macOS Loop: Native AI Computer Use & GUI Automation
 
-![Jev macOS AI agent sorts nine files in Finder into Invoices, Receipts, and Reports with an elapsed timer](docs/media/jev-finder-demo.gif)
+![Jev macOS AI agent sorts nine files in Finder into Invoices, Receipts, and Reports with an elapsed timer](docs/media/jev-finder-batch-demo.gif)
 
-**Real Finder demo: 9 files → 3 folders in 22.69 seconds, independently verified.** [Watch the full-resolution MP4](docs/media/jev-finder-demo.mp4) · [Recording details](docs/recording.md)
+**Real Finder demo: 9 files → 3 group moves in 7.39 seconds, independently verified.** [Watch the full-resolution MP4](docs/media/jev-finder-batch-demo.mp4) · [Recording details](docs/recording.md)
 
 Jev macOS Loop is an open-source computer-use agent for **native macOS GUI automation on Apple silicon**. It combines **OmniParser CoreML**, **Apple Vision OCR**, and **macOS accessibility** to identify controls locally, then uses **Jev** to select the next action. Bring your own token for **Vercel AI Gateway**, **OpenRouter**, or **TypesafeAI**.
 
@@ -36,7 +36,7 @@ Works through local terminal tools in Claude Code, Codex, Grok, Cursor, Gemini C
 - **Guarded input:** check focus, window position, occlusion, fresh frames, confidence, and live accessibility state before input.
 - **Independent verification:** the included native-app benchmarks check the actual result separately from Jev's DONE decision.
 
-The demo uses **real Finder**, nine fictional text files, and three empty folders. Jev reads each filename and chooses its destination; native mouse drags move the files. A separate verifier checks all nine locations and content hashes. Screen Studio captures only the Finder window, with no camera or audio. The elapsed timer is added from measured run timestamps; the entire timed task plays at normal speed without cuts.
+The demo uses **real Finder**, nine fictional text files, and three empty folders. Jev classifies all nine filenames in one request. The runner selects each exact group through macOS accessibility and moves it with one native drag—three group moves in total. A separate verifier checks all nine locations and content hashes. Screen Studio captures only the Finder window, with no camera or audio. The elapsed timer is added from measured run timestamps; the entire timed task plays at normal speed without cuts.
 
 ## Installation
 
@@ -93,7 +93,7 @@ npm run demo:finder -- --prepare
 npm run demo:finder -- --manifest /absolute/path/printed/above/manifest.json
 ```
 
-The first command creates a fresh temporary folder with nine dummy files and three empty destinations. The second warms up and waits for Enter, then Jev sorts `invoice_`, `receipt_`, and `report_` files into **Invoices**, **Receipts**, and **Reports**. Add `--now` to start immediately. Keep the Finder window visible and leave input idle. The final JSON must say `passed: true`; a failed or uncertain move stops the run. This experimental harness is restricted to its disposable setup. [Recording and verification details](docs/recording.md).
+The first command creates a fresh temporary folder with nine dummy files and three empty destinations. The second warms up and waits for Enter, then Jev sorts groups of `invoice_`, `receipt_`, and `report_` files into **Invoices**, **Receipts**, and **Reports**. Add `--now` to start immediately, or `--single` to reproduce the older individual-file approach. Keep the Finder window visible and leave input idle. The final JSON must say `passed: true`; a failed or uncertain move stops the run. This experimental harness is restricted to its disposable setup. [Recording and verification details](docs/recording.md).
 
 ## Verified performance
 
@@ -106,7 +106,7 @@ The first command creates a fresh temporary folder with nine dummy files and thr
 | Median full observe–decide–act cycle |          394.6 ms |    367.2 ms |
 | Task completion range                |       1.02–2.26 s | 0.90–2.49 s |
 
-The Finder demo completed in **22.69 s** through Vercel, including deliberate waits for Finder to settle after each drag. The earlier settings demo completed in **2.14 s**. These are small functional samples with model warmup excluded, not broad reliability evidence or a controlled provider comparison. [Read the benchmark methodology, raw traces, and failures](docs/performance.md).
+The batch Finder demo completed in **7.39 s** through Vercel, down from **22.69 s** for individual moves. Both timings include Finder settling and independent verification. The earlier settings demo completed in **2.14 s**. These are small functional samples with model warmup excluded, not broad reliability evidence or a controlled provider comparison. [Read the benchmark methodology, raw traces, and failures](docs/performance.md).
 
 ```sh
 npm test                                  # offline, no API calls
@@ -130,7 +130,8 @@ One persistent Swift process loads CoreML once and streams window frames through
 | `src/providers.mjs`       | Vercel AI Gateway, OpenRouter, and TypesafeAI adapters               |
 | `src/loop.mjs`            | Observe–decide–act loop and execution limits                         |
 | `scripts/benchmark.mjs`   | Live native-app suite with independent outcome checks                |
-| `src/finder.mjs`          | Finite-choice Finder sorting policy and guarded drag loop            |
+| `src/finder-batch.mjs`    | One classification request, exact group selection, and batch drags   |
+| `src/finder.mjs`          | Finder observations and the earlier individual-file baseline         |
 | `scripts/finder-demo.mjs` | Disposable Finder setup and independent file verification            |
 | `scripts/record-demo.mjs` | Timed settings recording harness                                     |
 

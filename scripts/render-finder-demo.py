@@ -54,7 +54,7 @@ with tempfile.TemporaryDirectory(prefix='jev-footer-') as temporary:
         draw.rectangle((0, 0, width, 3 * scale), fill='#5FE3B5')
         x = 40 * scale
         draw.text((x, 22 * scale), 'JEV SORTS FINDER' if not verified else '9 / 9 FILES VERIFIED', font=bold, fill='#F5F8FC')
-        sub = 'Real-time native macOS automation' if not verified else 'Correct folders. File contents unchanged.'
+        sub = ('9 files. 3 group moves. Real time.' if trace.get('mode') == 'batch' else 'Real-time native macOS automation') if not verified else 'Correct folders. File contents unchanged.'
         if inspection:
             sub = 'Result inspection after the timed run'
         draw.text((x, 79 * scale), sub, font=regular(29), fill='#BCC8D6')
