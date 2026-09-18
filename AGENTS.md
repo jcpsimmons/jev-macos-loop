@@ -126,6 +126,12 @@ The host agent's screen/file tools may transmit data under their own policies. J
 
 For output parsing, failure statuses, and subprocess examples, read [the CLI contract](docs/agent-integration.md#cli-contract). For a recording request, read [recording instructions](docs/recording.md).
 
+### Disposable Finder sorting demo
+
+`npm run demo:finder -- --prepare` creates nine fictional text files and three empty folders in a unique temporary directory. Open the printed root in exactly one Finder window, use list view sorted by Name, collapse the destination folders, and hide the sidebar and path bar before recording. Then run `npm run demo:finder -- --manifest /absolute/path/from/prepare/manifest.json`. It warms up and waits for Enter; `--now` starts immediately.
+
+This separate harness supports guarded file-to-folder drags in that disposable root. It offers Jev all three destinations for each visible filename, checks fresh stable observations and both drag endpoints, rejects multiple selections, and never retries a failed or uncertain drag. The policy cannot read the expected manifest or file contents. Success requires Jev DONE plus an independent check of all nine destinations, SHA-256 hashes, and no loose or extra files. A stopped run needs inspection and a fresh prepared dataset before another attempt. This is an experimental Finder workflow, not general drag support in `npm start`.
+
 ## Setup report
 
 Return: absolute installation path; selected provider/model without credentials; build/test results; the two permission booleans; provider-check result; fixture pass and artifact path; integrated instruction file; any unresolved blocker. Separate **installed**, **provider verified**, **desktop verified**, and **integrated**. Never claim an agent host or provider was tested unless it actually ran the checks.

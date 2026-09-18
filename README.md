@@ -1,8 +1,8 @@
 # Jev macOS Loop: Native AI Computer Use & GUI Automation
 
-![Jev macOS computer-use agent changes native app settings with a live timer and verifies success in 2.14 seconds](docs/media/jev-timed-demo.gif)
+![Jev macOS AI agent sorts nine files in Finder into Invoices, Receipts, and Reports with an elapsed timer](docs/media/jev-finder-demo.gif)
 
-**Real-time demo: 2.14 seconds to verified success.** [Watch the full-resolution MP4](docs/media/jev-timed-demo.mp4) · [Recording details](docs/recording.md)
+**Real Finder demo: 9 files → 3 folders in 22.69 seconds, independently verified.** [Watch the full-resolution MP4](docs/media/jev-finder-demo.mp4) · [Recording details](docs/recording.md)
 
 Jev macOS Loop is an open-source computer-use agent for **native macOS GUI automation on Apple silicon**. It combines **OmniParser CoreML**, **Apple Vision OCR**, and **macOS accessibility** to identify controls locally, then uses **Jev** to select the next action. Bring your own token for **Vercel AI Gateway**, **OpenRouter**, or **TypesafeAI**.
 
@@ -29,14 +29,14 @@ Works through local terminal tools in Claude Code, Codex, Grok, Cursor, Gemini C
 
 ## Native computer use with local perception
 
-- **Native Mac applications:** interact with visible controls through guarded mouse clicks, without a browser DOM.
+- **Native Mac applications:** interact with visible controls through guarded mouse clicks; the Finder demo also supports scoped file drags, without a browser DOM.
 - **Local computer vision:** ScreenCaptureKit, OmniParser CoreML, Apple Vision OCR, and accessibility labels identify the selected window's controls.
 - **Text-only Jev decisions:** screenshots, pixels, and coordinates stay on the Mac. Only observed text, the goal, and finite choices go to your selected provider.
 - **Three provider routes:** use your own Vercel AI Gateway, OpenRouter, or TypesafeAI console token.
-- **Guarded input:** check focus, window position, occlusion, fresh frames, confidence, and live accessibility state before clicking.
+- **Guarded input:** check focus, window position, occlusion, fresh frames, confidence, and live accessibility state before input.
 - **Independent verification:** the included native-app benchmarks check the actual result separately from Jev's DONE decision.
 
-The demo above is a Screen Studio recording of a disposable app window, with no camera or audio. It runs at normal speed. The live timer starts after model warmup and stops after independent verification.
+The demo uses **real Finder**, nine fictional text files, and three empty folders. Jev reads each filename and chooses its destination; native mouse drags move the files. A separate verifier checks all nine locations and content hashes. Screen Studio captures only the Finder window, with no camera or audio. The elapsed timer is added from measured run timestamps; the entire timed task plays at normal speed without cuts.
 
 ## Installation
 
@@ -85,6 +85,16 @@ Replace `123` with the window ID from `--windows`. Enable Screen Recording and A
 
 `--fast-ocr` reduces perception time for apps with good accessibility labels. Omit it for accurate OCR, or use `--no-ax` to test local computer vision without accessibility labels.
 
+## Try the Finder file-sorting demo
+
+```sh
+npm run demo:finder -- --prepare
+# Open the printed root in Finder; use list view, sort by Name, collapse folders.
+npm run demo:finder -- --manifest /absolute/path/printed/above/manifest.json
+```
+
+The first command creates a fresh temporary folder with nine dummy files and three empty destinations. The second warms up and waits for Enter, then Jev sorts `invoice_`, `receipt_`, and `report_` files into **Invoices**, **Receipts**, and **Reports**. Add `--now` to start immediately. Keep the Finder window visible and leave input idle. The final JSON must say `passed: true`; a failed or uncertain move stops the run. This experimental harness is restricted to its disposable setup. [Recording and verification details](docs/recording.md).
+
 ## Verified performance
 
 **6/6 native GUI tasks passed on Vercel and 6/6 on OpenRouter**, with separate Apple Calculator checks. Each suite includes settings changes and project navigation, varying button positions and testing with and without accessibility labels.
@@ -96,7 +106,7 @@ Replace `123` with the window ID from `--windows`. Enable Screen Recording and A
 | Median full observe–decide–act cycle |          394.6 ms |    367.2 ms |
 | Task completion range                |       1.02–2.26 s | 0.90–2.49 s |
 
-The timed README demo completed in **2.14 s** through Vercel. These are small functional samples with model warmup excluded, not broad reliability evidence or a controlled provider comparison. [Read the benchmark methodology, raw traces, and failures](docs/performance.md).
+The Finder demo completed in **22.69 s** through Vercel, including deliberate waits for Finder to settle after each drag. The earlier settings demo completed in **2.14 s**. These are small functional samples with model warmup excluded, not broad reliability evidence or a controlled provider comparison. [Read the benchmark methodology, raw traces, and failures](docs/performance.md).
 
 ```sh
 npm test                                  # offline, no API calls
@@ -105,11 +115,11 @@ node scripts/calculator.mjs 32 14          # open Calculator in Basic mode first
 npm run record:demo                       # disposable app with a live stopwatch
 ```
 
-Each benchmark launches a disposable native app. A separate result log verifies the final state; the decision policy cannot read it. Calculator has its own independent display reader. Local artifacts stay in `artifacts/`. See [how to record a timed demo](docs/recording.md#record-your-own).
+Each benchmark launches a disposable native app. A separate result log verifies the final state; the decision policy cannot read it. Calculator has its own independent display reader. Local artifacts stay in `artifacts/`. See [how to record a timed demo](docs/recording.md#record-the-finder-demo-yourself).
 
 ## How the macOS computer-use loop works
 
-**Capture → detect controls → read text → Jev chooses → validate → click → observe again.**
+**Capture → detect controls → read text → Jev chooses → validate → act → observe again.**
 
 One persistent Swift process loads CoreML once and streams window frames through ScreenCaptureKit. OmniParser and OCR run concurrently. Accessibility adds current labels, values, and bounds; conflicting OCR in those regions is resolved locally. Jev receives a finite-choice question over the observed element IDs. Coordinates and input remain local.
 
@@ -120,7 +130,9 @@ One persistent Swift process loads CoreML once and streams window frames through
 | `src/providers.mjs`       | Vercel AI Gateway, OpenRouter, and TypesafeAI adapters               |
 | `src/loop.mjs`            | Observe–decide–act loop and execution limits                         |
 | `scripts/benchmark.mjs`   | Live native-app suite with independent outcome checks                |
-| `scripts/record-demo.mjs` | Timed recording harness                                              |
+| `src/finder.mjs`          | Finite-choice Finder sorting policy and guarded drag loop            |
+| `scripts/finder-demo.mjs` | Disposable Finder setup and independent file verification            |
+| `scripts/record-demo.mjs` | Timed settings recording harness                                     |
 
 [Read the architecture and dependency details](docs/architecture.md).
 
@@ -136,7 +148,7 @@ The loop uses Jev's structured decision API rather than chat completions or gene
 
 ### Which Macs and applications are supported?
 
-The current build targets Apple silicon on macOS 14.2 or later. It handles clicks within one selected window. Apps with accessible controls work best; icon-only controls and OCR-only state can be ambiguous. Complex drags, free-form typing, and multi-window workflows are outside the current scope.
+The current build targets Apple silicon on macOS 14.2 or later. It handles clicks within one selected window. Apps with accessible controls work best; icon-only controls and OCR-only state can be ambiguous. The separate Finder harness adds file-to-folder drags inside its disposable directory. General drags, free-form typing, and multi-window workflows are outside the current scope.
 
 ### Can I use my own OpenRouter, Vercel, or TypesafeAI token?
 

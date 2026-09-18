@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "name": "report_quarterly.txt",
+      "sha256": "ada5e6a4d16d9eb80107438d8ff44a7bcc6c754625eaeaa30caaa47b3c6bbacb",
+      "folder": "Reports"
+    },
+    {
+      "name": "invoice_orion.txt",
+      "sha256": "cb51f7fb9e4854ca50c8755d68901598c67d0fc40969c6313de28503b81045ba",
+      "folder": "Invoices"
+    },
+    {
+      "name": "receipt_coffee.txt",
+      "sha256": "704b1248474344971d2050305b8e7fa87991947f852f1e752bb85baf2cebd33a",
+      "folder": "Receipts"
+    },
+    {
+      "name": "invoice_atlas.txt",
+      "sha256": "cbbed2329b620787e17120ec125f9b1525159e630306a5a76a6c42a40c8d358d",
+      "folder": "Invoices"
+    },
+    {
+      "name": "report_inventory.txt",
+      "sha256": "3801ac530ac855127c00fb2d4fe8dbde1a81297d2246c6bb51a310f2b5304ed1",
+      "folder": "Reports"
+    },
+    {
+      "name": "receipt_train.txt",
+      "sha256": "865a1a4837c035369123dee94b2b5a7e76fdde1c6323dc9490ca60c97c4ddeb4",
+      "folder": "Receipts"
+    },
+    {
+      "name": "report_weekly.txt",
+      "sha256": "7bcbc6dc450a3bef29466d928a3fde578e281788a6a74e57c9d12460d135d027",
+      "folder": "Reports"
+    },
+    {
+      "name": "receipt_supplies.txt",
+      "sha256": "47dd5f80b7617ad233c0d34225beb6a9e803a99837f1e7df5350f08ffb27924f",
+      "folder": "Receipts"
+    },
+    {
+      "name": "invoice_borealis.txt",
+      "sha256": "c0d293e91799a29f8557cdf3a102e96e3528f0759245da045387aa809c8f32d2",
+      "folder": "Invoices"
+    }
+  ],
+  "folders": [
+    "Invoices",
+    "Receipts",
+    "Reports"
+  ]
+}

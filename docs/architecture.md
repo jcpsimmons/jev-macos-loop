@@ -28,6 +28,8 @@ The fixture app writes a separate result file that the decision policy cannot re
 
 The current runner supports native clicks inside one selected window. It does not implement free-form typing, complex drags, or general multi-window planning. Icon-only controls and OCR-only state remain less dependable than controls with accessibility labels.
 
+The separate `demo:finder` harness supports file-to-folder drags inside a disposable directory. Local accessibility URLs bind both endpoints to that root; URLs and coordinates never enter its remote payload. Jev chooses among all three visible folders for the next filename. The native worker rechecks focus, occlusion, live bounds, names, URLs, and selection count before emitting a drag. Subsequent observations must agree on row positions, and uncertain drags are never repeated. A separate filesystem verifier checks all nine expected destinations and content hashes after completion. Setup creates the dummy files and empty folders; actual routing uses Finder input, not filesystem moves.
+
 ## Models and dependencies
 
 - [Microsoft OmniParser](https://github.com/microsoft/OmniParser)

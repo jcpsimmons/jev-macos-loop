@@ -1,0 +1,311 @@
+{
+  "passed": true,
+  "startedAt": 1789749475414,
+  "verifiedElapsedMs": 22692.759874999996,
+  "provider": "vercel",
+  "actual": [
+    {
+      "name": "report_quarterly.txt",
+      "folder": "Reports",
+      "passed": true
+    },
+    {
+      "name": "invoice_orion.txt",
+      "folder": "Invoices",
+      "passed": true
+    },
+    {
+      "name": "receipt_coffee.txt",
+      "folder": "Receipts",
+      "passed": true
+    },
+    {
+      "name": "invoice_atlas.txt",
+      "folder": "Invoices",
+      "passed": true
+    },
+    {
+      "name": "report_inventory.txt",
+      "folder": "Reports",
+      "passed": true
+    },
+    {
+      "name": "receipt_train.txt",
+      "folder": "Receipts",
+      "passed": true
+    },
+    {
+      "name": "report_weekly.txt",
+      "folder": "Reports",
+      "passed": true
+    },
+    {
+      "name": "receipt_supplies.txt",
+      "folder": "Receipts",
+      "passed": true
+    },
+    {
+      "name": "invoice_borealis.txt",
+      "folder": "Invoices",
+      "passed": true
+    }
+  ],
+  "rootOnlyFolders": true,
+  "totalFiles": 9,
+  "status": "done",
+  "trace": [
+    {
+      "step": 0,
+      "filesRemaining": 9,
+      "source": "invoice_atlas.txt",
+      "decision": {
+        "choice": "e21",
+        "probability": 1,
+        "probabilities": {
+          "BLOCKED": 0,
+          "e31": 0,
+          "e21": 1,
+          "e26": 0,
+          "DONE": 0
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 496.8715000000011
+      },
+      "action": {
+        "actionMs": 702.0199298858643,
+        "destination": "e21",
+        "dragged": "e17"
+      },
+      "status": "running",
+      "elapsedMs": 2506.9737920000007
+    },
+    {
+      "step": 1,
+      "filesRemaining": 8,
+      "source": "invoice_borealis.txt",
+      "decision": {
+        "choice": "e19",
+        "probability": 1,
+        "probabilities": {
+          "e24": 0,
+          "e19": 1,
+          "DONE": 0,
+          "e28": 0,
+          "BLOCKED": 0
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 270.14616699999897
+      },
+      "action": {
+        "actionMs": 712.9420042037964,
+        "destination": "e19",
+        "dragged": "e17"
+      },
+      "status": "running",
+      "elapsedMs": 4947.643042
+    },
+    {
+      "step": 2,
+      "filesRemaining": 7,
+      "source": "invoice_orion.txt",
+      "decision": {
+        "choice": "e18",
+        "probability": 1,
+        "probabilities": {
+          "e18": 1,
+          "e27": 0,
+          "BLOCKED": 0,
+          "DONE": 0,
+          "e23": 0
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 335.731749999999
+      },
+      "action": {
+        "actionMs": 716.6260480880737,
+        "destination": "e18",
+        "dragged": "e17"
+      },
+      "status": "running",
+      "elapsedMs": 7420.618917000003
+    },
+    {
+      "step": 3,
+      "filesRemaining": 6,
+      "source": "receipt_coffee.txt",
+      "decision": {
+        "choice": "e22",
+        "probability": 1,
+        "probabilities": {
+          "DONE": 0,
+          "BLOCKED": 0,
+          "e22": 1,
+          "e27": 0,
+          "e17": 0
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 441.2464170000021
+      },
+      "action": {
+        "actionMs": 696.5949535369873,
+        "destination": "e22",
+        "dragged": "e18"
+      },
+      "status": "running",
+      "elapsedMs": 10002.738042
+    },
+    {
+      "step": 4,
+      "filesRemaining": 5,
+      "source": "receipt_supplies.txt",
+      "decision": {
+        "choice": "e21",
+        "probability": 1,
+        "probabilities": {
+          "e17": 0,
+          "e21": 1,
+          "BLOCKED": 0,
+          "e26": 0,
+          "DONE": 0
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 362.6573339999959
+      },
+      "action": {
+        "actionMs": 697.9819536209106,
+        "destination": "e21",
+        "dragged": "e18"
+      },
+      "status": "running",
+      "elapsedMs": 12482.942041999999
+    },
+    {
+      "step": 5,
+      "filesRemaining": 4,
+      "source": "receipt_train.txt",
+      "decision": {
+        "choice": "e19",
+        "probability": 1,
+        "probabilities": {
+          "e17": 0,
+          "BLOCKED": 0,
+          "e19": 1,
+          "DONE": 0,
+          "e25": 0
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 300.2062089999963
+      },
+      "action": {
+        "actionMs": 697.1269845962524,
+        "destination": "e19",
+        "dragged": "e18"
+      },
+      "status": "running",
+      "elapsedMs": 14932.257792
+    },
+    {
+      "step": 6,
+      "filesRemaining": 3,
+      "source": "report_inventory.txt",
+      "decision": {
+        "choice": "e23",
+        "probability": 1,
+        "probabilities": {
+          "DONE": 0,
+          "BLOCKED": 0,
+          "e17": 0,
+          "e19": 0,
+          "e23": 1
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 331.36804100000154
+      },
+      "action": {
+        "actionMs": 699.1709470748901,
+        "destination": "e23",
+        "dragged": "e20"
+      },
+      "status": "running",
+      "elapsedMs": 17390.172833
+    },
+    {
+      "step": 7,
+      "filesRemaining": 2,
+      "source": "report_quarterly.txt",
+      "decision": {
+        "choice": "e22",
+        "probability": 1,
+        "probabilities": {
+          "e18": 0,
+          "BLOCKED": 0,
+          "DONE": 0,
+          "e17": 0,
+          "e22": 1
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 348.41912500000035
+      },
+      "action": {
+        "actionMs": 710.873007774353,
+        "destination": "e22",
+        "dragged": "e19"
+      },
+      "status": "running",
+      "elapsedMs": 19863.846958
+    },
+    {
+      "step": 8,
+      "filesRemaining": 1,
+      "source": "report_weekly.txt",
+      "decision": {
+        "choice": "e20",
+        "probability": 1,
+        "probabilities": {
+          "DONE": 0,
+          "e17": 0,
+          "e18": 0,
+          "BLOCKED": 0,
+          "e20": 1
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 255.02091700000165
+      },
+      "action": {
+        "actionMs": 698.0969905853271,
+        "destination": "e20",
+        "dragged": "e19"
+      },
+      "status": "running",
+      "elapsedMs": 22251.724707999998
+    },
+    {
+      "step": 9,
+      "filesRemaining": 0,
+      "decision": {
+        "choice": "DONE",
+        "probability": 0.99,
+        "probabilities": {
+          "BLOCKED": 0.01,
+          "DONE": 0.99
+        },
+        "provider": "vercel",
+        "model": "typesafe-ai/jev",
+        "decisionMs": 239.78512499999488
+      },
+      "action": null,
+      "status": "done",
+      "elapsedMs": 22689.83125
+    }
+  ],
+  "elapsedMs": 22690.324167000002
+}

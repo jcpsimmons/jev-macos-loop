@@ -41,11 +41,14 @@ struct Element {
   var confidence: Double
   var value: String = ""
   var enabled = true
+  // Local-only Finder scope metadata. Never include this in a provider payload.
+  var itemURL = ""
   var ax: AXUIElement? = nil
   var json: [String: Any] {
     [
       "id": id, "box": box(bounds), "label": label, "role": role, "source": source,
       "confidence": confidence, "value": value, "enabled": enabled,
+      "itemURL": itemURL,
     ]
   }
 }
@@ -239,7 +242,8 @@ final class Engine {
         result.append(
           Element(
             bounds: r, label: label, role: role, source: "ax", confidence: 1,
-            value: String(value.prefix(160)), enabled: enabled, ax: node))
+            value: String(value.prefix(160)), enabled: enabled,
+            itemURL: (attr(node, kAXURLAttribute) as? URL)?.absoluteString ?? "", ax: node))
       }
       for child in attr(node, kAXChildrenAttribute) as? [AXUIElement] ?? [] {
         walk(child, depth + 1)
@@ -369,6 +373,7 @@ final class Engine {
         icon.role = match.element.role
         icon.value = match.element.value
         icon.enabled = match.element.enabled
+        icon.itemURL = match.element.itemURL
         icon.ax = match.element.ax
         icon.bounds = match.element.bounds
         icon.source += "+ax"
@@ -412,7 +417,7 @@ final class Engine {
       "captureMode": streaming ? "stream" : "screenshot",
     ]
   }
-  func execute(_ command: [String: Any]) throws -> [String: Any] {
+  func validatedTarget(_ command: [String: Any], key: String = "target") throws -> (Element, CGPoint) {
     guard AXIsProcessTrusted() else {
       throw error("Accessibility permission is required for input")
     }
@@ -421,7 +426,7 @@ final class Engine {
     else {
       throw error("Stale frame; observe again")
     }
-    guard let id = command["target"] as? String,
+    guard let id = command[key] as? String,
       let element = elements.first(where: { $0.id == id }), element.enabled
     else { throw error("Unknown or disabled element") }
     guard let w = window, let pid = w.owningApplication?.processID else {
@@ -460,13 +465,19 @@ final class Engine {
         throw error("Element became disabled")
       }
       guard let r = rect(ax), r.insetBy(dx: -4, dy: -4).contains(point) else {
-        throw error("Element moved since observation")
+        throw error("Element moved since observation (expected \(box(element.bounds)), live \(rect(ax).map { box($0) } ?? []))")
       }
       let value = attr(ax, kAXValueAttribute).map { String(describing: $0) } ?? ""
       guard String(value.prefix(160)) == element.value else {
         throw error("Element value changed since observation")
       }
+      let liveURL = (attr(ax, kAXURLAttribute) as? URL)?.absoluteString ?? ""
+      guard liveURL == element.itemURL else { throw error("Finder item changed since observation") }
     }
+    return (element, point)
+  }
+  func execute(_ command: [String: Any]) throws -> [String: Any] {
+    let (element, point) = try validatedTarget(command)
     let source = CGEventSource(stateID: .hidSystemState)
     let start = now()
     CGEvent(
@@ -477,8 +488,80 @@ final class Engine {
       mouseButton: .left)?.post(tap: .cghidEventTap)
     requireFrameAfter = CACurrentMediaTime() + 0.016
     return [
-      "clicked": id, "label": element.label, "point": [point.x, point.y], "actionMs": ms(start),
+      "clicked": element.id, "label": element.label, "point": [point.x, point.y], "actionMs": ms(start),
     ]
+  }
+  func validateDrag(_ command: [String: Any]) throws -> (Element, CGPoint, Element, CGPoint) {
+    let (sourceElement, from) = try validatedTarget(command, key: "source")
+    let (destination, to) = try validatedTarget(command, key: "destination")
+    guard window?.owningApplication?.bundleIdentifier == "com.apple.finder",
+      sourceElement.id != destination.id,
+      sourceElement.role == "AXTextField", destination.role == "AXTextField",
+      let sourceAX = sourceElement.ax, destination.ax != nil,
+      let sourceURL = URL(string: sourceElement.itemURL), sourceURL.isFileURL,
+      let destinationURL = URL(string: destination.itemURL), destinationURL.isFileURL,
+      !sourceURL.hasDirectoryPath, destinationURL.hasDirectoryPath,
+      let root = command["root"] as? String, root.hasPrefix("/"),
+      sourceURL.deletingLastPathComponent().standardizedFileURL.path == URL(fileURLWithPath: root).standardizedFileURL.path,
+      destinationURL.deletingLastPathComponent().standardizedFileURL.path == URL(fileURLWithPath: root).standardizedFileURL.path
+    else { throw error("Drag requires two direct Finder items in the approved folder") }
+    // A Finder drag can otherwise move every selected row, not just its source.
+    var ancestor: AXUIElement? = sourceAX
+    var checkedSelection = false
+    for _ in 0..<8 {
+      guard let current = ancestor else { break }
+      if str(current, kAXRoleAttribute) == "AXOutline" {
+        guard let selected = attr(current, kAXSelectedRowsAttribute) as? [AXUIElement],
+          selected.count <= 1
+        else { throw error("Clear multiple Finder selections before dragging") }
+        checkedSelection = true
+        break
+      }
+      ancestor = attr(current, kAXParentAttribute).map { $0 as! AXUIElement }
+    }
+    guard checkedSelection else { throw error("Cannot verify Finder selection") }
+    return (sourceElement, from, destination, to)
+  }
+  func drag(_ command: [String: Any]) throws -> [String: Any] {
+    let (sourceElement, from, destination, to) = try validateDrag(command)
+    let eventSource = CGEventSource(stateID: .hidSystemState)
+    guard let down = CGEvent(mouseEventSource: eventSource, mouseType: .leftMouseDown,
+      mouseCursorPosition: from, mouseButton: .left),
+      let up = CGEvent(mouseEventSource: eventSource, mouseType: .leftMouseUp,
+      mouseCursorPosition: to, mouseButton: .left)
+    else { throw error("Cannot create drag events") }
+    // A deliberate lateral arc crosses Finder's drag threshold even for adjacent rows.
+    let bend = min(max(from.x, to.x) + 110, window!.frame.maxX - 20)
+    var previousPoint = from
+    let moves = (1...24).compactMap { step -> CGEvent? in
+      let t = Double(step) / 24, u = 1 - t
+      let point = CGPoint(x: u * u * from.x + 2 * u * t * bend + t * t * to.x,
+        y: from.y + (to.y - from.y) * t)
+      let event = CGEvent(mouseEventSource: eventSource, mouseType: .leftMouseDragged,
+        mouseCursorPosition: point, mouseButton: .left)
+      event?.setIntegerValueField(.mouseEventDeltaX, value: Int64((point.x - previousPoint.x).rounded()))
+      event?.setIntegerValueField(.mouseEventDeltaY, value: Int64((point.y - previousPoint.y).rounded()))
+      previousPoint = point
+      return event
+    }
+    guard moves.count == 24 else { throw error("Cannot create drag path") }
+    let start = now()
+    down.setIntegerValueField(.mouseEventClickState, value: 1)
+    up.setIntegerValueField(.mouseEventClickState, value: 1)
+    CGEvent(mouseEventSource: eventSource, mouseType: .mouseMoved,
+      mouseCursorPosition: from, mouseButton: .left)?.post(tap: .cghidEventTap)
+    Thread.sleep(forTimeInterval: 0.03)
+    down.post(tap: .cghidEventTap)
+    defer { up.post(tap: .cghidEventTap) }
+    Thread.sleep(forTimeInterval: 0.12)
+    for move in moves {
+      move.setIntegerValueField(.mouseEventClickState, value: 1)
+      move.post(tap: .cghidEventTap)
+      Thread.sleep(forTimeInterval: 0.015)
+    }
+    Thread.sleep(forTimeInterval: 0.12)
+    requireFrameAfter = CACurrentMediaTime() + 0.08
+    return ["dragged": sourceElement.id, "destination": destination.id, "actionMs": ms(start)]
   }
 }
 
@@ -512,6 +595,10 @@ final class Engine {
         case "focus": result = try await engine.focus()
         case "observe": result = try await engine.observe()
         case "click": result = try engine.execute(command)
+        case "drag": result = try engine.drag(command)
+        case "validate-drag":
+          _ = try engine.validateDrag(command)
+          result = ["valid": true]
         case "save":
           guard let image = engine.lastImage, let path = command["path"] as? String else {
             throw error("No image")
