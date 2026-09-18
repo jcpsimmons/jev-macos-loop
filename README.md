@@ -12,6 +12,21 @@ Jev macOS Loop is an open-source computer-use agent for **native macOS GUI autom
 
 [Install](#installation) · [Configure your token](#bring-your-own-token) · [Run an automation](#run-native-macos-automation) · [Benchmarks](#verified-performance) · [Architecture](docs/architecture.md)
 
+## Set up with your agent
+
+**Copy and paste this into your agent:**
+
+```text
+Read https://raw.githubusercontent.com/jcpsimmons/jev-macos-loop/master/AGENTS.md
+and follow its instructions to install, configure, verify, and integrate Jev
+macOS Loop with my agent. Reuse an existing installation or token configuration
+where available. Complete the setup and disposable-app test, then make it
+available for future native Mac tasks. Ask me only for missing information,
+credentials through a secure local workflow, or permissions you actually need.
+```
+
+Works through local terminal tools in Claude Code, Codex, Grok, Cursor, Gemini CLI, Copilot, and other coding agents. [AGENTS.md](AGENTS.md) has the full workflow. Requires a local Apple silicon Mac; the guide handles prerequisites, provider tokens, and macOS permissions.
+
 ## Native computer use with local perception
 
 - **Native Mac applications:** interact with visible controls through guarded mouse clicks, without a browser DOM.
