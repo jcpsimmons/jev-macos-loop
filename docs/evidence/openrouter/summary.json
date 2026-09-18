@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-09-18T06:14:20.741Z",
+  "provider": "openrouter",
+  "model": "~typesafe/jev-latest",
+  "modelLoadMs": 1334.830416,
+  "totalMs": 14973.469459,
+  "passed": 6,
+  "trials": 6,
+  "decisionMs": {
+    "samples": 22,
+    "p50": 293.49925000000076,
+    "p95": 465.0751660000001,
+    "min": 212.46741699999984,
+    "max": 762.2206249999999
+  },
+  "cycleMs": {
+    "samples": 22,
+    "p50": 367.242792,
+    "p95": 550.1027919999997,
+    "min": 264.64999999999964,
+    "max": 935.3780409999999
+  },
+  "perceptionMs": {
+    "samples": 22,
+    "p50": 52.46007442474365,
+    "p95": 95.78204154968262,
+    "min": 21.36099338531494,
+    "max": 101.06801986694336
+  },
+  "detectorMs": {
+    "samples": 22,
+    "p50": 10.650038719177246,
+    "p95": 11.579036712646484,
+    "min": 10.354995727539062,
+    "max": 11.694073677062988
+  },
+  "taskMs": {
+    "samples": 6,
+    "p50": 1228.1519169999992,
+    "p95": 2493.6106249999993,
+    "min": 904.0090829999999,
+    "max": 2493.6106249999993
+  },
+  "reports": [
+    {
+      "timestamp": "2026-09-18T06:14:09.990Z",
+      "name": "dark-notifications",
+      "ax": true,
+      "fastOCR": true,
+      "goal": "Change the appearance to Dark, enable notifications, and save the settings. Stop when saved successfully.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 2050.566,
+      "actions": [
+        "Settings",
+        "Dark",
+        "Enable notifications",
+        "Save settings"
+      ]
+    },
+    {
+      "timestamp": "2026-09-18T06:14:11.655Z",
+      "name": "project-borealis",
+      "ax": true,
+      "fastOCR": true,
+      "goal": "Open the overview for Project Borealis.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 944.2326249999996,
+      "actions": [
+        "Projects",
+        "Project Borealis"
+      ]
+    },
+    {
+      "timestamp": "2026-09-18T06:14:13.247Z",
+      "name": "light-no-notifications",
+      "ax": true,
+      "fastOCR": true,
+      "goal": "Save settings with the Light appearance and notifications disabled.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 904.0090829999999,
+      "actions": [
+        "Settings",
+        "Save settings"
+      ]
+    },
+    {
+      "timestamp": "2026-09-18T06:14:16.578Z",
+      "name": "dark-notifications",
+      "ax": false,
+      "fastOCR": false,
+      "goal": "Change the appearance to Dark, enable notifications, and save the settings. Stop when saved successfully.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 2493.6106249999993,
+      "actions": [
+        "Settings",
+        "Dark",
+        "Enable notifications",
+        "Save settings"
+      ]
+    },
+    {
+      "timestamp": "2026-09-18T06:14:18.569Z",
+      "name": "project-borealis",
+      "ax": false,
+      "fastOCR": false,
+      "goal": "Open the overview for Project Borealis.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 1228.1519169999992,
+      "actions": [
+        "Projects",
+        "Project Borealis"
+      ]
+    },
+    {
+      "timestamp": "2026-09-18T06:14:20.739Z",
+      "name": "light-no-notifications",
+      "ax": false,
+      "fastOCR": false,
+      "goal": "Save settings with the Light appearance and notifications disabled.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 1422.9851249999992,
+      "actions": [
+        "Settings",
+        "Save settings"
+      ]
+    }
+  ]
+}

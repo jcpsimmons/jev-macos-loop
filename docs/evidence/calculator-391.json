@@ -1,0 +1,3866 @@
+{
+  "goal": "Clear the current calculation. Then calculate 17 multiplied by 23 using the buttons.",
+  "verification": {
+    "display": "391",
+    "expected": "391",
+    "passed": true,
+    "source": "Calculator StandardInputView via independent AX reader"
+  },
+  "status": "done",
+  "trace": [
+    {
+      "step": 0,
+      "observation": {
+        "axText": [
+          "‎32‎×‎14",
+          "‎448"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.4072265625,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.3251953125,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.4482421875,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.86474609375,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.853515625,
+            "enabled": true,
+            "id": "e6",
+            "label": "All Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.326904296875,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.35986328125,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 0.57177734375,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 0.448486328125,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 0.5673828125,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 0.439208984375,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.84716796875,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.703125,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.379638671875,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.84765625,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.9013671875,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.86328125,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.74853515625,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 2,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 16.326069831848145,
+          "captureMs": 0.8080005645751953,
+          "detected": 18,
+          "detectorMs": 10.807037353515625,
+          "observeMs": 45.88603973388672,
+          "ocr": 16,
+          "ocrMs": 28.339028358459473,
+          "visionMs": 28.36894989013672
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "7",
+          "4",
+          "1",
+          "/-",
+          "AC",
+          "8",
+          "5",
+          "2",
+          "32×14",
+          "448",
+          "%",
+          "9",
+          "6",
+          "3",
+          "+",
+          "="
+        ],
+        "text": [
+          "‎32‎×‎14",
+          "‎448"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e6",
+        "probability": 1,
+        "probabilities": {
+          "e2": 0,
+          "e1": 0,
+          "BLOCKED": 0,
+          "e23": 0,
+          "e22": 0,
+          "e6": 1,
+          "e15": 0,
+          "e3": 0,
+          "e24": 0,
+          "e17": 0,
+          "e19": 0,
+          "e0": 0,
+          "e20": 0,
+          "e8": 0,
+          "e13": 0,
+          "DONE": 0,
+          "e21": 0,
+          "e14": 0,
+          "e18": 0,
+          "e7": 0,
+          "e16": 0,
+          "e11": 0,
+          "WAIT": 0,
+          "e9": 0,
+          "e10": 0,
+          "e12": 0,
+          "e5": 0
+        },
+        "decisionMs": 414.33337499999993,
+        "usage": {
+          "inputTokens": 1706,
+          "outputTokens": 248,
+          "totalTokens": 1954
+        }
+      },
+      "action": {
+        "actionMs": 8.478045463562012,
+        "clicked": "e6",
+        "label": "All Clear",
+        "point": [
+          1660,
+          323
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 474.27158299999974,
+      "elapsedMs": 474.277875
+    },
+    {
+      "step": 1,
+      "observation": {
+        "axText": [
+          "‎0"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.4072265625,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.3251953125,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.4482421875,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1729.9225573149438,
+              229.7572795001045,
+              62.15488433837891,
+              20.485441207885774
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e5",
+            "label": "32×14",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1734.0000004285714,
+              261.99999990000003,
+              60.000000000000014,
+              26
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e6",
+            "label": "448",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.86474609375,
+            "enabled": true,
+            "id": "e7",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.853515625,
+            "enabled": true,
+            "id": "e8",
+            "label": "All Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.326904296875,
+            "enabled": true,
+            "id": "e9",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.35986328125,
+            "enabled": true,
+            "id": "e10",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 0.57177734375,
+            "enabled": true,
+            "id": "e11",
+            "label": "7",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e12",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e13",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 0.448486328125,
+            "enabled": true,
+            "id": "e14",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 0.5673828125,
+            "enabled": true,
+            "id": "e15",
+            "label": "4",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 0.439208984375,
+            "enabled": true,
+            "id": "e16",
+            "label": "5",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e17",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e18",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.84716796875,
+            "enabled": true,
+            "id": "e19",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.703125,
+            "enabled": true,
+            "id": "e20",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e21",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.379638671875,
+            "enabled": true,
+            "id": "e22",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.84765625,
+            "enabled": true,
+            "id": "e23",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.9013671875,
+            "enabled": true,
+            "id": "e24",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.86328125,
+            "enabled": true,
+            "id": "e25",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.74853515625,
+            "enabled": true,
+            "id": "e26",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 3,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 11.795997619628906,
+          "captureMs": 0.5570650100708008,
+          "detected": 18,
+          "detectorMs": 11.7720365524292,
+          "observeMs": 80.76798915863037,
+          "ocr": 16,
+          "ocrMs": 51.80203914642334,
+          "visionMs": 51.834940910339355
+        },
+        "ocrText": [
+          "32×14",
+          "448"
+        ],
+        "rawOCRText": [
+          "7",
+          "4",
+          "1",
+          "/-",
+          "AC",
+          "8",
+          "5",
+          "2",
+          "32×14",
+          "448",
+          "%",
+          "9",
+          "6",
+          "3",
+          "+",
+          "="
+        ],
+        "text": [
+          "‎0",
+          "32×14",
+          "448"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e19",
+        "probability": 0.97,
+        "probabilities": {
+          "e17": 0,
+          "e7": 0,
+          "e10": 0,
+          "e13": 0,
+          "WAIT": 0.01,
+          "e6": 0,
+          "e15": 0,
+          "e26": 0,
+          "e18": 0,
+          "e8": 0.02,
+          "e11": 0,
+          "e21": 0,
+          "e16": 0,
+          "e19": 0.97,
+          "e22": 0,
+          "e12": 0,
+          "e3": 0,
+          "e2": 0,
+          "DONE": 0,
+          "e20": 0,
+          "e5": 0,
+          "e0": 0,
+          "e25": 0,
+          "e9": 0,
+          "e24": 0,
+          "BLOCKED": 0,
+          "e14": 0,
+          "e23": 0,
+          "e1": 0
+        },
+        "decisionMs": 252.7182499999999,
+        "usage": {
+          "inputTokens": 1833,
+          "outputTokens": 267,
+          "totalTokens": 2100
+        }
+      },
+      "action": {
+        "actionMs": 0.05900859832763672,
+        "clicked": "e19",
+        "label": "1",
+        "point": [
+          1606,
+          485
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 342.9404999999997,
+      "elapsedMs": 817.4245830000002
+    },
+    {
+      "step": 2,
+      "observation": {
+        "axText": [
+          "‎1"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.390869140625,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.478759765625,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.57373046875,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.8134765625,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.5263671875,
+            "enabled": true,
+            "id": "e6",
+            "label": "Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.7353515625,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.305419921875,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.85595703125,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.88671875,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.8173828125,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.60302734375,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          }
+        ],
+        "frame": 4,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 15.59901237487793,
+          "captureMs": 20.941972732543945,
+          "detected": 11,
+          "detectorMs": 10.76805591583252,
+          "observeMs": 70.88899612426758,
+          "ocr": 9,
+          "ocrMs": 33.68806838989258,
+          "visionMs": 33.720970153808594
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "7",
+          "4",
+          "1",
+          "/",
+          "AC",
+          "5",
+          "2",
+          "9",
+          "%"
+        ],
+        "text": [
+          "‎1"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e9",
+        "probability": 0.64,
+        "probabilities": {
+          "DONE": 0,
+          "e15": 0,
+          "e20": 0,
+          "e11": 0,
+          "e23": 0,
+          "e8": 0,
+          "e21": 0,
+          "e22": 0,
+          "e0": 0,
+          "e5": 0,
+          "e9": 0.64,
+          "e10": 0,
+          "e2": 0,
+          "e3": 0,
+          "e14": 0,
+          "e24": 0,
+          "e1": 0,
+          "e18": 0.2,
+          "e6": 0.01,
+          "e12": 0.02,
+          "e16": 0,
+          "e7": 0,
+          "e17": 0.11,
+          "e13": 0,
+          "e19": 0.02,
+          "WAIT": 0,
+          "BLOCKED": 0
+        },
+        "decisionMs": 235.4484580000003,
+        "usage": {
+          "inputTokens": 1741,
+          "outputTokens": 248,
+          "totalTokens": 1989
+        }
+      },
+      "action": {
+        "actionMs": 0.0699758529663086,
+        "clicked": "e9",
+        "label": "7",
+        "point": [
+          1606,
+          377
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 316.3555000000001,
+      "elapsedMs": 1134.0580830000001
+    },
+    {
+      "step": 3,
+      "observation": {
+        "axText": [
+          "‎17"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.39501953125,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.5126953125,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.6064453125,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.76953125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.4775390625,
+            "enabled": true,
+            "id": "e6",
+            "label": "Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.6669921875,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.85546875,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.88720703125,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.81298828125,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.59228515625,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 5,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 13.013005256652832,
+          "captureMs": 21.18206024169922,
+          "detected": 10,
+          "detectorMs": 10.877013206481934,
+          "observeMs": 72.30496406555176,
+          "ocr": 13,
+          "ocrMs": 37.81092166900635,
+          "visionMs": 37.84501552581787
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "7",
+          "4",
+          "1",
+          "8",
+          "5",
+          "2",
+          "%",
+          "9",
+          "6",
+          "3",
+          "17",
+          "+",
+          "="
+        ],
+        "text": [
+          "‎17"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e12",
+        "probability": 0.95,
+        "probabilities": {
+          "e10": 0,
+          "e13": 0,
+          "BLOCKED": 0,
+          "e12": 0.95,
+          "e15": 0,
+          "e22": 0,
+          "e9": 0,
+          "e24": 0,
+          "e2": 0,
+          "WAIT": 0,
+          "e7": 0,
+          "e6": 0.01,
+          "e16": 0,
+          "e18": 0.04,
+          "e11": 0,
+          "e23": 0,
+          "e3": 0,
+          "e8": 0,
+          "e19": 0,
+          "DONE": 0,
+          "e5": 0,
+          "e0": 0,
+          "e21": 0,
+          "e14": 0,
+          "e1": 0,
+          "e20": 0,
+          "e17": 0
+        },
+        "decisionMs": 398.8912909999999,
+        "usage": {
+          "inputTokens": 1767,
+          "outputTokens": 249,
+          "totalTokens": 2016
+        }
+      },
+      "action": {
+        "actionMs": 0.04398822784423828,
+        "clicked": "e12",
+        "label": "Multiply",
+        "point": [
+          1768,
+          377
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 480.5526249999998,
+      "elapsedMs": 1614.6870420000002
+    },
+    {
+      "step": 4,
+      "observation": {
+        "axText": [
+          "‎17‎×"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.40087890625,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.487548828125,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.59765625,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.82763671875,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.669921875,
+            "enabled": true,
+            "id": "e6",
+            "label": "Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.7646484375,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.3984375,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.85986328125,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.896484375,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.84521484375,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.66845703125,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 6,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 12.405991554260254,
+          "captureMs": 24.328947067260742,
+          "detected": 11,
+          "detectorMs": 10.26904582977295,
+          "observeMs": 62.11495399475098,
+          "ocr": 7,
+          "ocrMs": 24.77407455444336,
+          "visionMs": 24.80494976043701
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "=",
+          "+",
+          "6",
+          "%",
+          "XLL",
+          "8",
+          "L"
+        ],
+        "text": [
+          "‎17‎×"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e18",
+        "probability": 0.55,
+        "probabilities": {
+          "e5": 0,
+          "e14": 0,
+          "BLOCKED": 0,
+          "e23": 0,
+          "e21": 0,
+          "e10": 0,
+          "e0": 0,
+          "e20": 0,
+          "e7": 0,
+          "WAIT": 0,
+          "e19": 0.01,
+          "e17": 0.4,
+          "DONE": 0,
+          "e2": 0,
+          "e9": 0,
+          "e16": 0,
+          "e24": 0,
+          "e15": 0,
+          "e13": 0,
+          "e8": 0,
+          "e3": 0,
+          "e18": 0.55,
+          "e6": 0.03,
+          "e22": 0,
+          "e11": 0,
+          "e1": 0,
+          "e12": 0
+        },
+        "decisionMs": 300.0362909999999,
+        "usage": {
+          "inputTokens": 1794,
+          "outputTokens": 249,
+          "totalTokens": 2043
+        }
+      },
+      "action": {
+        "actionMs": 0.03504753112792969,
+        "clicked": "e18",
+        "label": "2",
+        "point": [
+          1660,
+          485
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 366.401292,
+      "elapsedMs": 1981.4237500000002
+    },
+    {
+      "step": 5,
+      "observation": {
+        "axText": [
+          "‎17‎×‎2"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.458984375,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.443359375,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.61474609375,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.828125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.53955078125,
+            "enabled": true,
+            "id": "e6",
+            "label": "Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.7705078125,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.39453125,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.86767578125,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.90185546875,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.8525390625,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.71240234375,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 7,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 15.138030052185059,
+          "captureMs": 23.14305305480957,
+          "detected": 11,
+          "detectorMs": 11.059999465942383,
+          "observeMs": 74.13101196289062,
+          "ocr": 7,
+          "ocrMs": 35.44902801513672,
+          "visionMs": 35.48097610473633
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "=",
+          "+",
+          "6",
+          "%",
+          "Z×LL",
+          "8",
+          "L"
+        ],
+        "text": [
+          "‎17‎×‎2"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e19",
+        "probability": 0.9,
+        "probabilities": {
+          "e11": 0,
+          "e14": 0,
+          "BLOCKED": 0,
+          "e23": 0,
+          "e21": 0,
+          "e10": 0,
+          "e0": 0,
+          "e7": 0,
+          "e20": 0,
+          "DONE": 0,
+          "e19": 0.9,
+          "e17": 0.02,
+          "WAIT": 0,
+          "e2": 0,
+          "e9": 0.03,
+          "e16": 0,
+          "e24": 0,
+          "e15": 0,
+          "e13": 0,
+          "e8": 0,
+          "e3": 0,
+          "e18": 0.05,
+          "e22": 0,
+          "e6": 0,
+          "e5": 0,
+          "e12": 0,
+          "e1": 0
+        },
+        "decisionMs": 373.5155840000002,
+        "usage": {
+          "inputTokens": 1821,
+          "outputTokens": 249,
+          "totalTokens": 2070
+        }
+      },
+      "action": {
+        "actionMs": 0.03802776336669922,
+        "clicked": "e19",
+        "label": "3",
+        "point": [
+          1714,
+          485
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 451.4713750000001,
+      "elapsedMs": 2433.5406250000005
+    },
+    {
+      "step": 6,
+      "observation": {
+        "axText": [
+          "‎17‎×‎23"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.458984375,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.443359375,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.61474609375,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.828125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.53955078125,
+            "enabled": true,
+            "id": "e6",
+            "label": "Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.7705078125,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.39453125,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.86767578125,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.90185546875,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.8525390625,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.71240234375,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 8,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 14.74297046661377,
+          "captureMs": 23.481011390686035,
+          "detected": 11,
+          "detectorMs": 10.967016220092773,
+          "observeMs": 74.05197620391846,
+          "ocr": 7,
+          "ocrMs": 35.26198863983154,
+          "visionMs": 35.299062728881836
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "=",
+          "+",
+          "6",
+          "%",
+          "Z×LL",
+          "8",
+          "L"
+        ],
+        "text": [
+          "‎17‎×‎23"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "e24",
+        "probability": 0.97,
+        "probabilities": {
+          "e9": 0,
+          "e5": 0,
+          "e17": 0,
+          "e3": 0,
+          "e8": 0,
+          "e16": 0,
+          "e13": 0,
+          "e2": 0,
+          "e23": 0,
+          "e6": 0.01,
+          "e15": 0,
+          "e19": 0,
+          "e10": 0,
+          "e24": 0.97,
+          "e1": 0,
+          "e22": 0,
+          "e11": 0,
+          "DONE": 0.02,
+          "e21": 0,
+          "e20": 0,
+          "e12": 0,
+          "e18": 0,
+          "WAIT": 0,
+          "BLOCKED": 0,
+          "e0": 0,
+          "e7": 0,
+          "e14": 0
+        },
+        "decisionMs": 417.4074579999997,
+        "usage": {
+          "inputTokens": 1847,
+          "outputTokens": 249,
+          "totalTokens": 2096
+        }
+      },
+      "action": {
+        "actionMs": 0.03504753112792969,
+        "clicked": "e24",
+        "label": "Equals",
+        "point": [
+          1768,
+          539
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 498.6570839999995,
+      "elapsedMs": 2932.554792
+    },
+    {
+      "step": 7,
+      "observation": {
+        "axText": [
+          "‎17‎×‎23",
+          "‎391"
+        ],
+        "bounds": [
+          1572,
+          166,
+          230,
+          408
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              1672,
+              166,
+              48,
+              52
+            ],
+            "confidence": 0.36962890625,
+            "enabled": true,
+            "id": "e0",
+            "label": "Show Sidebar",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1754,
+              166,
+              44,
+              52
+            ],
+            "confidence": 0.375,
+            "enabled": true,
+            "id": "e1",
+            "label": "Mode",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1590,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1613,
+              184,
+              16,
+              16
+            ],
+            "confidence": 0.441162109375,
+            "enabled": true,
+            "id": "e3",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              184,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e4",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.86279296875,
+            "enabled": true,
+            "id": "e5",
+            "label": "Delete",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              299,
+              48,
+              48
+            ],
+            "confidence": 0.85595703125,
+            "enabled": true,
+            "id": "e6",
+            "label": "All Clear",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Percent",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              299,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Divide",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              353,
+              48,
+              48
+            ],
+            "confidence": 0.50244140625,
+            "enabled": true,
+            "id": "e9",
+            "label": "7",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e10",
+            "label": "8",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              353,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e11",
+            "label": "9",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              353,
+              48,
+              48
+            ],
+            "confidence": 0.331787109375,
+            "enabled": true,
+            "id": "e12",
+            "label": "Multiply",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              407,
+              48,
+              48
+            ],
+            "confidence": 0.63330078125,
+            "enabled": true,
+            "id": "e13",
+            "label": "4",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              407,
+              48,
+              48
+            ],
+            "confidence": 0.346435546875,
+            "enabled": true,
+            "id": "e14",
+            "label": "5",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e15",
+            "label": "6",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              407,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e16",
+            "label": "Subtract",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.841796875,
+            "enabled": true,
+            "id": "e17",
+            "label": "1",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.66162109375,
+            "enabled": true,
+            "id": "e18",
+            "label": "2",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              461,
+              48,
+              48
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e19",
+            "label": "3",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              461,
+              48,
+              48
+            ],
+            "confidence": 0.252685546875,
+            "enabled": true,
+            "id": "e20",
+            "label": "Add",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1582,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.8466796875,
+            "enabled": true,
+            "id": "e21",
+            "label": "Change Sign",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              1636,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.89794921875,
+            "enabled": true,
+            "id": "e22",
+            "label": "0",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1690,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.857421875,
+            "enabled": true,
+            "id": "e23",
+            "label": "Point",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              1744,
+              515,
+              48,
+              48
+            ],
+            "confidence": 0.73193359375,
+            "enabled": true,
+            "id": "e24",
+            "label": "Equals",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 9,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 25,
+          "axMs": 13.266921043395996,
+          "captureMs": 36.979079246520996,
+          "detected": 16,
+          "detectorMs": 11.531949043273926,
+          "observeMs": 83.56499671936035,
+          "ocr": 17,
+          "ocrMs": 32.90092945098877,
+          "visionMs": 32.95409679412842
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "7",
+          "4",
+          "1",
+          "/-",
+          "AC",
+          "8",
+          "5",
+          "2",
+          "17×23",
+          "391",
+          "%",
+          "9",
+          "X",
+          "6",
+          "3",
+          "+",
+          "="
+        ],
+        "text": [
+          "‎17‎×‎23",
+          "‎391"
+        ],
+        "title": "Calculator",
+        "window": 77943
+      },
+      "decision": {
+        "choice": "DONE",
+        "probability": 0.93,
+        "probabilities": {
+          "e23": 0,
+          "e0": 0,
+          "e12": 0,
+          "e11": 0,
+          "e3": 0,
+          "e2": 0,
+          "e5": 0,
+          "e1": 0,
+          "e7": 0,
+          "e10": 0,
+          "e15": 0,
+          "e19": 0,
+          "e13": 0,
+          "e21": 0,
+          "BLOCKED": 0.01,
+          "e17": 0,
+          "e20": 0,
+          "e9": 0,
+          "e8": 0,
+          "e6": 0.04,
+          "WAIT": 0.01,
+          "e14": 0,
+          "e16": 0,
+          "DONE": 0.93,
+          "e24": 0.01,
+          "e22": 0,
+          "e18": 0
+        },
+        "decisionMs": 250.36729200000082,
+        "usage": {
+          "inputTokens": 1881,
+          "outputTokens": 247,
+          "totalTokens": 2128
+        }
+      },
+      "action": null,
+      "status": "done",
+      "settleObservations": 0,
+      "cycleMs": 334.3801250000006,
+      "elapsedMs": 3267.7390830000004
+    }
+  ],
+  "elapsedMs": 3267.881042
+}

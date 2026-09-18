@@ -1,0 +1,50 @@
+[
+  {
+    "provider": "openrouter",
+    "model": "typesafe/jev-1.13-20260917",
+    "attempt": 1,
+    "passed": true,
+    "decisionMs": 652,
+    "answer": {
+      "type": "choice",
+      "choice": "green",
+      "probabilities": {
+        "green": 1,
+        "red": 0
+      },
+      "confidence": 1
+    }
+  },
+  {
+    "provider": "openrouter",
+    "model": "typesafe/jev-1.13-20260917",
+    "attempt": 2,
+    "passed": true,
+    "decisionMs": 371,
+    "answer": {
+      "type": "choice",
+      "choice": "green",
+      "probabilities": {
+        "green": 1,
+        "red": 0
+      },
+      "confidence": 1
+    }
+  },
+  {
+    "provider": "openrouter",
+    "model": "typesafe/jev-1.13-20260917",
+    "attempt": 3,
+    "passed": true,
+    "decisionMs": 269,
+    "answer": {
+      "type": "choice",
+      "choice": "green",
+      "probabilities": {
+        "green": 1,
+        "red": 0
+      },
+      "confidence": 1
+    }
+  }
+]

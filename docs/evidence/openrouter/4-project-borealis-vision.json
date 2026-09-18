@@ -1,0 +1,636 @@
+{
+  "timestamp": "2026-09-18T06:14:18.569Z",
+  "name": "project-borealis",
+  "ax": false,
+  "fastOCR": false,
+  "goal": "Open the overview for Project Borealis.",
+  "passed": true,
+  "taskSucceeded": true,
+  "actual": {
+    "clicks": [
+      "Projects",
+      "Project Borealis"
+    ],
+    "notifications": false,
+    "page": "project",
+    "pid": 62036,
+    "project": "Project Borealis",
+    "saved": false,
+    "theme": "Light",
+    "timestamp": 1789712058.158401,
+    "variant": 4
+  },
+  "warmupMs": 360.3140115737915,
+  "status": "done",
+  "trace": [
+    {
+      "step": 0,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              222.3895263671875,
+              579.4204406738281,
+              73.1689453125,
+              27.01776123046875
+            ],
+            "confidence": 0.2548828125,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "control",
+            "source": "omniparser",
+            "value": ""
+          },
+          {
+            "box": [
+              247.9999976333334,
+              588.0000001,
+              142,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "• Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.9558568239823,
+              635.7328407865392,
+              180.08828735351565,
+              30.534319877624508
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.8975402718273,
+              763.4588642938032,
+              124.20491790771483,
+              25.082271575927724
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e4",
+            "label": "Workspace",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.24365234375,
+              849.8527526855469,
+              225.6591796875,
+              29.32965087890625
+            ],
+            "confidence": 0.4345703125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Settings",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              526.9580078125,
+              851.4789123535156,
+              225.439453125,
+              27.33123779296875
+            ],
+            "confidence": 0.67236328125,
+            "enabled": true,
+            "id": "e6",
+            "label": "Projects",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              797.77099609375,
+              849.9801025390625,
+              225.2197265625,
+              29.074951171875
+            ],
+            "confidence": 0.736328125,
+            "enabled": true,
+            "id": "e7",
+            "label": "Reports",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              262.00000055,
+              956.0000001999999,
+              236.00000000000003,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Choose a workspace section",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          }
+        ],
+        "frame": 25,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.0020265579223632812,
+          "captureMs": 1.314997673034668,
+          "detected": 4,
+          "detectorMs": 10.650038719177246,
+          "observeMs": 66.58995151519775,
+          "ocr": 8,
+          "ocrMs": 64.84496593475342,
+          "visionMs": 64.86999988555908
+        },
+        "ocrText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Settings",
+          "Projects",
+          "Choose a workspace section",
+          "Reports"
+        ],
+        "rawOCRText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Settings",
+          "Projects",
+          "Choose a workspace section",
+          "Reports"
+        ],
+        "text": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Settings",
+          "Projects",
+          "Choose a workspace section",
+          "Reports"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78246
+      },
+      "decision": {
+        "choice": "e6",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.99,
+        "probabilities": {
+          "e3": 0,
+          "e7": 0,
+          "e0": 0,
+          "e6": 0.99,
+          "DONE": 0,
+          "WAIT": 0,
+          "e4": 0,
+          "e8": 0,
+          "e1": 0,
+          "e5": 0,
+          "BLOCKED": 0.01,
+          "e2": 0
+        },
+        "decisionMs": 268.8558749999993,
+        "usage": {
+          "inputTokens": 1036,
+          "outputTokens": 113,
+          "totalTokens": 1149
+        }
+      },
+      "action": {
+        "actionMs": 0.028967857360839844,
+        "clicked": "e6",
+        "label": "Projects",
+        "point": [
+          639.677734375,
+          865.14453125
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 338.1409160000003,
+      "elapsedMs": 338.1424999999999
+    },
+    {
+      "step": 1,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              247.9999976333334,
+              588.0000001,
+              142,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "• Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.86914875661557,
+              635.1937983106932,
+              180.26170349121097,
+              31.612403869628917
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              261.9535641906149,
+              763.8246735434877,
+              90.09287261962889,
+              24.35065269470217
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Projects",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.24365234375,
+              845.8363342285156,
+              228.2958984375,
+              28.58514404296875
+            ],
+            "confidence": 0.54541015625,
+            "enabled": true,
+            "id": "e4",
+            "label": "Project Atlas",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              525.74951171875,
+              846.49267578125,
+              226.5380859375,
+              27.5859375
+            ],
+            "confidence": 0.67724609375,
+            "enabled": true,
+            "id": "e5",
+            "label": "Project Borealis",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              797.99072265625,
+              846.2183837890625,
+              225.6591796875,
+              27.821044921875
+            ],
+            "confidence": 0.7294921875,
+            "enabled": true,
+            "id": "e6",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 27,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.00095367431640625,
+          "captureMs": 0.8120536804199219,
+          "detected": 3,
+          "detectorMs": 10.579943656921387,
+          "observeMs": 67.85202026367188,
+          "ocr": 7,
+          "ocrMs": 61.010003089904785,
+          "visionMs": 61.045050621032715
+        },
+        "ocrText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Projects",
+          "Project Atlas",
+          "Project Borealis",
+          "Back"
+        ],
+        "rawOCRText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Projects",
+          "Project Atlas",
+          "Project Borealis",
+          "Back"
+        ],
+        "text": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Projects",
+          "Project Atlas",
+          "Project Borealis",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78246
+      },
+      "decision": {
+        "choice": "e5",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "WAIT": 0,
+          "e4": 0,
+          "BLOCKED": 0,
+          "e0": 0,
+          "e3": 0,
+          "e6": 0,
+          "DONE": 0,
+          "e5": 1,
+          "e1": 0,
+          "e2": 0
+        },
+        "decisionMs": 304.5444580000003,
+        "usage": {
+          "inputTokens": 973,
+          "outputTokens": 97,
+          "totalTokens": 1070
+        }
+      },
+      "action": {
+        "actionMs": 0.03695487976074219,
+        "clicked": "e5",
+        "label": "Project Borealis",
+        "point": [
+          639.0185546875,
+          860.28564453125
+        ]
+      },
+      "status": "running",
+      "settleObservations": 1,
+      "cycleMs": 490.93295899999976,
+      "elapsedMs": 829.1714169999996
+    },
+    {
+      "step": 2,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              299.99999850000006,
+              588.0000001,
+              90.00000000000003,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.88676502828434,
+              635.3048908787578,
+              180.2264709472656,
+              31.390218734741236
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              261.99999786000006,
+              776.00000028,
+              310,
+              28.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Project Borealis overview",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.99999827500005,
+              848.0000000999999,
+              138.00000000000003,
+              20.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e4",
+            "label": "Status: Active",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.02392578125,
+              956.4347839355469,
+              226.9775390625,
+              28.07574462890625
+            ],
+            "confidence": 0.52587890625,
+            "enabled": true,
+            "id": "e5",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 28,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.0010728836059570312,
+          "captureMs": 27.98604965209961,
+          "detected": 1,
+          "detectorMs": 11.382102966308594,
+          "observeMs": 101.06801986694336,
+          "ocr": 6,
+          "ocrMs": 72.69001007080078,
+          "visionMs": 72.73805141448975
+        },
+        "ocrText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Project Borealis overview",
+          "Status: Active",
+          "Back"
+        ],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Project Borealis overview",
+          "Status: Active",
+          "Back"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Project Borealis overview",
+          "Status: Active",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78246
+      },
+      "decision": {
+        "choice": "DONE",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.99,
+        "probabilities": {
+          "e1": 0,
+          "e4": 0,
+          "WAIT": 0,
+          "BLOCKED": 0,
+          "e5": 0,
+          "e3": 0.01,
+          "e0": 0,
+          "DONE": 0.99,
+          "e2": 0
+        },
+        "decisionMs": 297.3393329999999,
+        "usage": {
+          "inputTokens": 958,
+          "outputTokens": 88,
+          "totalTokens": 1046
+        }
+      },
+      "action": null,
+      "status": "done",
+      "settleObservations": 0,
+      "cycleMs": 398.76229199999943,
+      "elapsedMs": 1228.0317079999986
+    }
+  ],
+  "elapsedMs": 1228.1519169999992
+}

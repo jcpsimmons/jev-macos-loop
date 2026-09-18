@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-09-18T06:11:39.127Z",
+  "provider": "vercel",
+  "model": "typesafe-ai/jev",
+  "modelLoadMs": 1346.050625,
+  "totalMs": 3997.115875,
+  "passed": 1,
+  "trials": 1,
+  "decisionMs": {
+    "samples": 5,
+    "p50": 281.8944999999999,
+    "p95": 358.4755419999997,
+    "min": 227.34912500000019,
+    "max": 358.4755419999997
+  },
+  "cycleMs": {
+    "samples": 5,
+    "p50": 332.4615829999998,
+    "p95": 388.65058299999964,
+    "min": 281.23479199999974,
+    "max": 388.65058299999964
+  },
+  "perceptionMs": {
+    "samples": 5,
+    "p50": 49.47400093078613,
+    "p95": 55.59110641479492,
+    "min": 20.346999168395996,
+    "max": 55.59110641479492
+  },
+  "detectorMs": {
+    "samples": 5,
+    "p50": 10.800004005432129,
+    "p95": 11.43801212310791,
+    "min": 10.55300235748291,
+    "max": 11.43801212310791
+  },
+  "taskMs": {
+    "samples": 1,
+    "p50": 1667.7547920000002,
+    "p95": 1667.7547920000002,
+    "min": 1667.7547920000002,
+    "max": 1667.7547920000002
+  },
+  "reports": [
+    {
+      "timestamp": "2026-09-18T06:11:39.124Z",
+      "name": "dark-notifications",
+      "ax": true,
+      "fastOCR": true,
+      "goal": "Change the appearance to Dark, enable notifications, and save the settings. Stop when saved successfully.",
+      "passed": true,
+      "taskSucceeded": true,
+      "status": "done",
+      "elapsedMs": 1667.7547920000002,
+      "actions": [
+        "Settings",
+        "Dark",
+        "Enable notifications",
+        "Save settings"
+      ]
+    }
+  ]
+}

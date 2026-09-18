@@ -1,0 +1,1228 @@
+{
+  "timestamp": "2026-09-18T06:14:16.578Z",
+  "name": "dark-notifications",
+  "ax": false,
+  "fastOCR": false,
+  "goal": "Change the appearance to Dark, enable notifications, and save the settings. Stop when saved successfully.",
+  "passed": true,
+  "taskSucceeded": true,
+  "actual": {
+    "clicks": [
+      "Settings",
+      "Dark",
+      "Enable notifications",
+      "Save settings"
+    ],
+    "notifications": true,
+    "page": "saved",
+    "pid": 62034,
+    "project": "",
+    "saved": true,
+    "theme": "Dark",
+    "timestamp": 1789712056.1650019,
+    "variant": 3
+  },
+  "warmupMs": 438.8749599456787,
+  "status": "done",
+  "trace": [
+    {
+      "step": 0,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              222.4169921875,
+              579.4302368164062,
+              73.1689453125,
+              27.01776123046875
+            ],
+            "confidence": 0.250244140625,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "control",
+            "source": "omniparser",
+            "value": ""
+          },
+          {
+            "box": [
+              247.9999976333334,
+              588.0000001,
+              142,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "• Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.9142155893373,
+              635.4763958540801,
+              180.17156982421875,
+              31.047208786010724
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.999999225,
+              764.000000075,
+              124,
+              24.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e4",
+            "label": "Workspace",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.02392578125,
+              850.4111328125,
+              225.87890625,
+              28.83984375
+            ],
+            "confidence": 0.3681640625,
+            "enabled": true,
+            "id": "e5",
+            "label": "Reports",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.50732421875,
+              851.4789123535156,
+              225.2197265625,
+              27.33123779296875
+            ],
+            "confidence": 0.64794921875,
+            "enabled": true,
+            "id": "e6",
+            "label": "Projects",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              797.77099609375,
+              849.5686645507812,
+              225.2197265625,
+              29.5843505859375
+            ],
+            "confidence": 0.70068359375,
+            "enabled": true,
+            "id": "e7",
+            "label": "Settings",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              262.00000055,
+              956.0000001999999,
+              236.00000000000003,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Choose a workspace section",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          }
+        ],
+        "frame": 16,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.00095367431640625,
+          "captureMs": 0.9180307388305664,
+          "detected": 4,
+          "detectorMs": 10.905981063842773,
+          "observeMs": 60.13309955596924,
+          "ocr": 8,
+          "ocrMs": 58.75194072723389,
+          "visionMs": 58.782100677490234
+        },
+        "ocrText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Reports",
+          "Projects",
+          "Choose a workspace section",
+          "Settings"
+        ],
+        "rawOCRText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Reports",
+          "Projects",
+          "Choose a workspace section",
+          "Settings"
+        ],
+        "text": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Reports",
+          "Projects",
+          "Choose a workspace section",
+          "Settings"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78240
+      },
+      "decision": {
+        "choice": "e7",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "e8": 0,
+          "e1": 0,
+          "e7": 1,
+          "DONE": 0,
+          "BLOCKED": 0,
+          "e0": 0,
+          "e6": 0,
+          "e3": 0,
+          "e4": 0,
+          "e2": 0,
+          "WAIT": 0,
+          "e5": 0
+        },
+        "decisionMs": 263.6442910000005,
+        "usage": {
+          "inputTokens": 1046,
+          "outputTokens": 113,
+          "totalTokens": 1159
+        }
+      },
+      "action": {
+        "actionMs": 0.5090236663818359,
+        "clicked": "e7",
+        "label": "Settings",
+        "point": [
+          910.380859375,
+          864.36083984375
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 332.8507499999996,
+      "elapsedMs": 332.8523329999989
+    },
+    {
+      "step": 1,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              249.99999766666673,
+              588.0000001,
+              139.99999999999997,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "• Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.92443134844052,
+              635.5397236437398,
+              180.15113830566406,
+              30.92055416107177
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.9093160599905,
+              763.5242253132136,
+              134.1813659667969,
+              26.951549530029226
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Appearance",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.24365234375,
+              846.2477722167969,
+              228.076171875,
+              28.07574462890625
+            ],
+            "confidence": 0.490966796875,
+            "enabled": true,
+            "id": "e4",
+            "label": "Light",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.177734375,
+              845.9636840820312,
+              226.318359375,
+              28.3304443359375
+            ],
+            "confidence": 0.5673828125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Dark",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.66380972861987,
+              895.1056471753918,
+              174.7865447998047,
+              25.73558235168459
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e6",
+            "label": "Current theme: Light",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              261.5351867675781,
+              961.0095825195312,
+              20.80535888671875,
+              18.2991943359375
+            ],
+            "confidence": 0.5107421875,
+            "enabled": true,
+            "id": "e7",
+            "label": "O Enable notifications",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              256.80419921875,
+              1053.23046875,
+              227.8564453125,
+              31.34765625
+            ],
+            "confidence": 0.544921875,
+            "enabled": true,
+            "id": "e8",
+            "label": "Save settings",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.72705078125,
+              1055.111328125,
+              227.4169921875,
+              28.83984375
+            ],
+            "confidence": 0.476806640625,
+            "enabled": true,
+            "id": "e9",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 18,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.0019073486328125,
+          "captureMs": 1.1529922485351562,
+          "detected": 5,
+          "detectorMs": 10.746955871582031,
+          "observeMs": 64.8120641708374,
+          "ocr": 10,
+          "ocrMs": 63.24899196624756,
+          "visionMs": 63.295960426330566
+        },
+        "ocrText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Light",
+          "O Enable notifications",
+          "Dark",
+          "Save settings",
+          "Back"
+        ],
+        "rawOCRText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Light",
+          "O Enable notifications",
+          "Dark",
+          "Save settings",
+          "Back"
+        ],
+        "text": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Light",
+          "O Enable notifications",
+          "Dark",
+          "Save settings",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78240
+      },
+      "decision": {
+        "choice": "e5",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.92,
+        "probabilities": {
+          "e2": 0,
+          "e4": 0.02,
+          "e7": 0.06,
+          "e1": 0,
+          "e0": 0,
+          "WAIT": 0,
+          "e5": 0.92,
+          "DONE": 0,
+          "e6": 0,
+          "e3": 0,
+          "e8": 0,
+          "e9": 0,
+          "BLOCKED": 0
+        },
+        "decisionMs": 762.2206249999999,
+        "usage": {
+          "inputTokens": 1127,
+          "outputTokens": 121,
+          "totalTokens": 1248
+        }
+      },
+      "action": {
+        "actionMs": 0.051021575927734375,
+        "clicked": "e5",
+        "label": "Dark",
+        "point": [
+          640.3369140625,
+          860.12890625
+        ]
+      },
+      "status": "running",
+      "settleObservations": 1,
+      "cycleMs": 935.3780409999999,
+      "elapsedMs": 1268.5992499999993
+    },
+    {
+      "step": 2,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              249.99999766666673,
+              588.0000001,
+              139.99999999999997,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "• Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.916550184024,
+              635.4908974258162,
+              180.16690063476562,
+              31.018206596374522
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.9692678415181,
+              763.8406782841787,
+              134.06146240234375,
+              26.318643569946328
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Appearance",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.46337890625,
+              846.6885986328125,
+              227.8564453125,
+              27.821044921875
+            ],
+            "confidence": 0.50439453125,
+            "enabled": true,
+            "id": "e4",
+            "label": "Light",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.28759765625,
+              846.0910339355469,
+              226.0986328125,
+              28.07574462890625
+            ],
+            "confidence": 0.52294921875,
+            "enabled": true,
+            "id": "e5",
+            "label": "Dark",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              260.00000105,
+              898.0000002500001,
+              172,
+              19.999999999999932
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e6",
+            "label": "Current theme: Dark",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              261.6107177734375,
+              961.0095825195312,
+              20.928955078125,
+              18.2991943359375
+            ],
+            "confidence": 0.50439453125,
+            "enabled": true,
+            "id": "e7",
+            "label": "O Enable notifications",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.02392578125,
+              1053.6125183105469,
+              227.4169921875,
+              30.58355712890625
+            ],
+            "confidence": 0.5322265625,
+            "enabled": true,
+            "id": "e8",
+            "label": "Save settings",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.72705078125,
+              1054.9937744140625,
+              227.4169921875,
+              29.074951171875
+            ],
+            "confidence": 0.396728515625,
+            "enabled": true,
+            "id": "e9",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 20,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.0010728836059570312,
+          "captureMs": 1.0579824447631836,
+          "detected": 5,
+          "detectorMs": 10.532021522521973,
+          "observeMs": 64.34297561645508,
+          "ocr": 10,
+          "ocrMs": 61.160922050476074,
+          "visionMs": 61.19990348815918
+        },
+        "ocrText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Dark",
+          "Dark",
+          "O Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "rawOCRText": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Dark",
+          "Dark",
+          "O Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "text": [
+          "• Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Dark",
+          "Dark",
+          "O Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78240
+      },
+      "decision": {
+        "choice": "e7",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "e3": 0,
+          "e7": 1,
+          "WAIT": 0,
+          "e6": 0,
+          "DONE": 0,
+          "e9": 0,
+          "e4": 0,
+          "e8": 0,
+          "e1": 0,
+          "e5": 0,
+          "BLOCKED": 0,
+          "e0": 0,
+          "e2": 0
+        },
+        "decisionMs": 243.7445829999997,
+        "usage": {
+          "inputTokens": 1152,
+          "outputTokens": 121,
+          "totalTokens": 1273
+        }
+      },
+      "action": {
+        "actionMs": 0.032067298889160156,
+        "clicked": "e7",
+        "label": "O Enable notifications",
+        "point": [
+          272.0751953125,
+          970.1591796875
+        ]
+      },
+      "status": "running",
+      "settleObservations": 1,
+      "cycleMs": 419.4260000000013,
+      "elapsedMs": 1688.1096249999991
+    },
+    {
+      "step": 3,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              299.99999850000006,
+              588.0000001,
+              90.00000000000003,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.94051411183938,
+              635.6388447380422,
+              180.11897277832034,
+              30.72231101989744
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.99999904285716,
+              764.0000000714285,
+              134,
+              26.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Appearance",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.5732421875,
+              846.9335021972656,
+              227.8564453125,
+              27.33123779296875
+            ],
+            "confidence": 0.52734375,
+            "enabled": true,
+            "id": "e4",
+            "label": "Light",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.28759765625,
+              846.3359375,
+              226.0986328125,
+              27.5859375
+            ],
+            "confidence": 0.51220703125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Dark",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.99999975000003,
+              897.9999997500001,
+              172,
+              20.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e6",
+            "label": "Current theme: Dark",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              261.99999755000005,
+              960.00000015,
+              196,
+              20.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "O Enable notifications",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              256.80419921875,
+              1053.3578186035156,
+              227.8564453125,
+              31.09295654296875
+            ],
+            "confidence": 0.52099609375,
+            "enabled": true,
+            "id": "e8",
+            "label": "Save settings",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.50732421875,
+              1055.111328125,
+              227.8564453125,
+              28.83984375
+            ],
+            "confidence": 0.358154296875,
+            "enabled": true,
+            "id": "e9",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 22,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.0019073486328125,
+          "captureMs": 0.9130239486694336,
+          "detected": 4,
+          "detectorMs": 10.354995727539062,
+          "observeMs": 74.05996322631836,
+          "ocr": 10,
+          "ocrMs": 71.24197483062744,
+          "visionMs": 71.27094268798828
+        },
+        "ocrText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Dark",
+          "Dark",
+          "O Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Dark",
+          "Dark",
+          "O Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Light",
+          "Current theme: Dark",
+          "Dark",
+          "O Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78240
+      },
+      "decision": {
+        "choice": "e8",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.9,
+        "probabilities": {
+          "e9": 0,
+          "e5": 0.01,
+          "DONE": 0.01,
+          "e3": 0,
+          "e8": 0.9,
+          "e4": 0,
+          "e2": 0,
+          "e6": 0,
+          "WAIT": 0,
+          "BLOCKED": 0,
+          "e0": 0,
+          "e7": 0.08,
+          "e1": 0
+        },
+        "decisionMs": 216.9940829999996,
+        "usage": {
+          "inputTokens": 1176,
+          "outputTokens": 121,
+          "totalTokens": 1297
+        }
+      },
+      "action": {
+        "actionMs": 0.030040740966796875,
+        "clicked": "e8",
+        "label": "Save settings",
+        "point": [
+          370.732421875,
+          1068.904296875
+        ]
+      },
+      "status": "running",
+      "settleObservations": 1,
+      "cycleMs": 399.94916600000033,
+      "elapsedMs": 2088.140792
+    },
+    {
+      "step": 4,
+      "observation": {
+        "axText": [],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              299.99999850000006,
+              588.0000001,
+              90.00000000000003,
+              14.000000000000002
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              255.9206090218455,
+              635.5160343735881,
+              180.15878295898435,
+              30.967932701110886
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e1",
+            "label": "Jev Loop Lab",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              257.9999961000001,
+              682.00000008,
+              390,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "Local native app • live clicks • independent result log",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259.9999975142857,
+              774.0000000714285,
+              348,
+              30.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e3",
+            "label": "Settings saved successfully",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              260.0000003,
+              850.000000275,
+              128,
+              21.999999999999932
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e4",
+            "label": "Theme: Dark",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              262.00000133749995,
+              899.9999998999999,
+              213.99999999999997,
+              20.000000000000004
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e5",
+            "label": "Notifications: enabled",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              256.2548828125,
+              1025.017578125,
+              226.9775390625,
+              28.83984375
+            ],
+            "confidence": 0.6279296875,
+            "enabled": true,
+            "id": "e6",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 23,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 0,
+          "axMs": 0.0010728836059570312,
+          "captureMs": 28.31900119781494,
+          "detected": 1,
+          "detectorMs": 10.64598560333252,
+          "observeMs": 95.78204154968262,
+          "ocr": 7,
+          "ocrMs": 66.90895557403564,
+          "visionMs": 66.94698333740234
+        },
+        "ocrText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Settings saved successfully",
+          "Theme: Dark",
+          "Notifications: enabled",
+          "Back"
+        ],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Settings saved successfully",
+          "Theme: Dark",
+          "Notifications: enabled",
+          "Back"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Settings saved successfully",
+          "Theme: Dark",
+          "Notifications: enabled",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78240
+      },
+      "decision": {
+        "choice": "DONE",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "e5": 0,
+          "DONE": 1,
+          "e3": 0,
+          "e4": 0,
+          "e2": 0,
+          "e6": 0,
+          "BLOCKED": 0,
+          "WAIT": 0,
+          "e0": 0,
+          "e1": 0
+        },
+        "decisionMs": 308.5450000000001,
+        "usage": {
+          "inputTokens": 1064,
+          "outputTokens": 96,
+          "totalTokens": 1160
+        }
+      },
+      "action": null,
+      "status": "done",
+      "settleObservations": 0,
+      "cycleMs": 405.31583299999875,
+      "elapsedMs": 2493.5312079999985
+    }
+  ],
+  "elapsedMs": 2493.6106249999993
+}

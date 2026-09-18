@@ -1,0 +1,47 @@
+[
+  {
+    "provider": "vercel",
+    "model": "typesafe-ai/jev",
+    "attempt": 1,
+    "passed": true,
+    "decisionMs": 408,
+    "answer": {
+      "type": "choice",
+      "choice": "green",
+      "probabilities": {
+        "green": 1,
+        "red": 0
+      }
+    }
+  },
+  {
+    "provider": "vercel",
+    "model": "typesafe-ai/jev",
+    "attempt": 2,
+    "passed": true,
+    "decisionMs": 269,
+    "answer": {
+      "type": "choice",
+      "choice": "green",
+      "probabilities": {
+        "green": 1,
+        "red": 0
+      }
+    }
+  },
+  {
+    "provider": "vercel",
+    "model": "typesafe-ai/jev",
+    "attempt": 3,
+    "passed": true,
+    "decisionMs": 375,
+    "answer": {
+      "type": "choice",
+      "choice": "green",
+      "probabilities": {
+        "green": 1,
+        "red": 0
+      }
+    }
+  }
+]

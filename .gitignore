@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.venv/
+.build/
+models/*
+!models/.gitkeep
+artifacts/
+__pycache__/
+.DS_Store

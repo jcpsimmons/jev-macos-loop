@@ -1,0 +1,543 @@
+{
+  "timestamp": "2026-09-18T06:14:11.655Z",
+  "name": "project-borealis",
+  "ax": true,
+  "fastOCR": true,
+  "goal": "Open the overview for Project Borealis.",
+  "passed": true,
+  "taskSucceeded": true,
+  "actual": {
+    "clicks": [
+      "Projects",
+      "Project Borealis"
+    ],
+    "notifications": false,
+    "page": "project",
+    "pid": 61877,
+    "project": "Project Borealis",
+    "saved": false,
+    "theme": "Light",
+    "timestamp": 1789712051.3812962,
+    "variant": 1
+  },
+  "warmupMs": 316.4949417114258,
+  "status": "done",
+  "trace": [
+    {
+      "step": 0,
+      "observation": {
+        "axText": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Choose a workspace section",
+          "Jev Loop Lab"
+        ],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              228,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              251,
+              586,
+              16,
+              16
+            ],
+            "confidence": 0.250244140625,
+            "enabled": false,
+            "id": "e1",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              274,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "this button also has an action to zoom the window",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              259,
+              836,
+              222,
+              60
+            ],
+            "confidence": 0.3681640625,
+            "enabled": true,
+            "id": "e3",
+            "label": "Reports",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              529,
+              836,
+              222,
+              60
+            ],
+            "confidence": 0.64794921875,
+            "enabled": true,
+            "id": "e4",
+            "label": "Projects",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              799,
+              836,
+              222,
+              60
+            ],
+            "confidence": 0.70068359375,
+            "enabled": true,
+            "id": "e5",
+            "label": "Settings",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 8,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 6,
+          "axMs": 8.710980415344238,
+          "captureMs": 0.9839534759521484,
+          "detected": 4,
+          "detectorMs": 10.602951049804688,
+          "observeMs": 25.896072387695312,
+          "ocr": 8,
+          "ocrMs": 7.702946662902832,
+          "visionMs": 10.64002513885498
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app . live clicks . independent result log",
+          "Workspace",
+          "Reports",
+          "Projects",
+          "Settings",
+          "Choose a workspace section"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Choose a workspace section",
+          "Jev Loop Lab"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78228
+      },
+      "decision": {
+        "choice": "e4",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "e5": 0,
+          "e3": 0,
+          "e0": 0,
+          "WAIT": 0,
+          "DONE": 0,
+          "e2": 0,
+          "BLOCKED": 0,
+          "e4": 1
+        },
+        "decisionMs": 305.70337500000005,
+        "usage": {
+          "inputTokens": 845,
+          "outputTokens": 81,
+          "totalTokens": 926
+        }
+      },
+      "action": {
+        "actionMs": 0.06592273712158203,
+        "clicked": "e4",
+        "label": "Projects",
+        "point": [
+          640,
+          866
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 340.09729100000004,
+      "elapsedMs": 340.1012919999994
+    },
+    {
+      "step": 1,
+      "observation": {
+        "axText": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Projects",
+          "Jev Loop Lab"
+        ],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              228,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              251,
+              586,
+              16,
+              16
+            ],
+            "confidence": 0.250244140625,
+            "enabled": false,
+            "id": "e1",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              274,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "this button also has an action to zoom the window",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              259,
+              831,
+              222,
+              60
+            ],
+            "confidence": 0.3681640625,
+            "enabled": true,
+            "id": "e3",
+            "label": "Project Borealis",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              529,
+              831,
+              222,
+              60
+            ],
+            "confidence": 0.64794921875,
+            "enabled": true,
+            "id": "e4",
+            "label": "Project Atlas",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              799,
+              831,
+              222,
+              60
+            ],
+            "confidence": 0.70068359375,
+            "enabled": true,
+            "id": "e5",
+            "label": "Back",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              263,
+              955,
+              234,
+              16.999999999999964
+            ],
+            "confidence": 0.5,
+            "enabled": true,
+            "id": "e6",
+            "label": "Choose a workspace section",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          }
+        ],
+        "frame": 9,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 6,
+          "axMs": 3.4999847412109375,
+          "captureMs": 27.48405933380127,
+          "detected": 4,
+          "detectorMs": 10.966062545776367,
+          "observeMs": 42.41502285003662,
+          "ocr": 8,
+          "ocrMs": 9.907960891723633,
+          "visionMs": 11.003971099853516
+        },
+        "ocrText": [
+          "Choose a workspace section"
+        ],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app . live clicks . independent result log",
+          "Workspace",
+          "Reports",
+          "Projects",
+          "Settings",
+          "Choose a workspace section"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Projects",
+          "Jev Loop Lab",
+          "Choose a workspace section"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78228
+      },
+      "decision": {
+        "choice": "e3",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "e4": 0,
+          "e5": 0,
+          "e0": 0,
+          "e3": 1,
+          "DONE": 0,
+          "WAIT": 0,
+          "BLOCKED": 0,
+          "e6": 0,
+          "e2": 0
+        },
+        "decisionMs": 293.49925000000076,
+        "usage": {
+          "inputTokens": 924,
+          "outputTokens": 89,
+          "totalTokens": 1013
+        }
+      },
+      "action": {
+        "actionMs": 0.030994415283203125,
+        "clicked": "e3",
+        "label": "Project Borealis",
+        "point": [
+          370,
+          861
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 339.0632919999998,
+      "elapsedMs": 679.3662089999998
+    },
+    {
+      "step": 2,
+      "observation": {
+        "axText": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Project Borealis overview",
+          "Status: Active",
+          "Jev Loop Lab"
+        ],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              228,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              251,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e1",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              274,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "this button also has an action to zoom the window",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              259,
+              941,
+              222,
+              60
+            ],
+            "confidence": 0.52587890625,
+            "enabled": true,
+            "id": "e3",
+            "label": "Back",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 10,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 4,
+          "axMs": 2.619028091430664,
+          "captureMs": 36.57197952270508,
+          "detected": 1,
+          "detectorMs": 10.802984237670898,
+          "observeMs": 51.31399631500244,
+          "ocr": 6,
+          "ocrMs": 11.728048324584961,
+          "visionMs": 11.767029762268066
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app . live clicks . independent result log",
+          "Project Borealis overview",
+          "ststus: Active",
+          "Back"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Project Borealis overview",
+          "Status: Active",
+          "Jev Loop Lab"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78228
+      },
+      "decision": {
+        "choice": "DONE",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.99,
+        "probabilities": {
+          "e2": 0,
+          "BLOCKED": 0,
+          "e3": 0,
+          "e0": 0,
+          "DONE": 0.99,
+          "WAIT": 0.01
+        },
+        "decisionMs": 212.46741699999984,
+        "usage": {
+          "inputTokens": 812,
+          "outputTokens": 64,
+          "totalTokens": 876
+        }
+      },
+      "action": null,
+      "status": "done",
+      "settleObservations": 0,
+      "cycleMs": 264.64999999999964,
+      "elapsedMs": 944.128917
+    }
+  ],
+  "elapsedMs": 944.2326249999996
+}

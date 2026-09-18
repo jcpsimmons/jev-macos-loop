@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-09-18T15:17:16Z",
+  "provider": "vercel",
+  "passed": true,
+  "verifiedElapsedMs": 2141.212875000001,
+  "recorder": "Screen Studio 3.7.5 bundled polyrecorder 2.7.0",
+  "captureScope": "One disposable Jev Loop Lab window",
+  "sourceWidth": 1800,
+  "sourceHeight": 1284,
+  "audioStreams": 0,
+  "camera": false,
+  "keyboardCapture": false,
+  "speedMultiplier": 1,
+  "trim": "First six seconds; idle tail removed; no internal cuts",
+  "exports": [
+    {
+      "file": "docs/media/jev-timed-demo.mp4",
+      "sha256": "62dec2f54efbde7bbffcb1b513f531682f4ea150efe7762866b515d7a7d66e3d",
+      "width": 1800,
+      "height": 1284,
+      "fps": 30,
+      "durationSeconds": 6
+    },
+    {
+      "file": "docs/media/jev-timed-demo.gif",
+      "sha256": "15efb29befcde7b18e8b2b447bec4c6cd89a161050860e6fb2ff68f3163ec793",
+      "width": 900,
+      "height": 642,
+      "fps": 20,
+      "durationSeconds": 6
+    }
+  ]
+}

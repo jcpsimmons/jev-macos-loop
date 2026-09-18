@@ -1,0 +1,668 @@
+{
+  "timestamp": "2026-09-18T06:14:13.247Z",
+  "name": "light-no-notifications",
+  "ax": true,
+  "fastOCR": true,
+  "goal": "Save settings with the Light appearance and notifications disabled.",
+  "passed": true,
+  "taskSucceeded": true,
+  "actual": {
+    "clicks": [
+      "Settings",
+      "Save settings"
+    ],
+    "notifications": false,
+    "page": "saved",
+    "pid": 61879,
+    "project": "",
+    "saved": true,
+    "theme": "Light",
+    "timestamp": 1789712052.945201,
+    "variant": 2
+  },
+  "warmupMs": 299.27003383636475,
+  "status": "done",
+  "trace": [
+    {
+      "step": 0,
+      "observation": {
+        "axText": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Choose a workspace section",
+          "Jev Loop Lab"
+        ],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              228,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              251,
+              586,
+              16,
+              16
+            ],
+            "confidence": 0.2548828125,
+            "enabled": false,
+            "id": "e1",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              274,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "this button also has an action to zoom the window",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              259,
+              836,
+              222,
+              60
+            ],
+            "confidence": 0.4345703125,
+            "enabled": true,
+            "id": "e3",
+            "label": "Settings",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              529,
+              836,
+              222,
+              60
+            ],
+            "confidence": 0.67236328125,
+            "enabled": true,
+            "id": "e4",
+            "label": "Projects",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              799,
+              836,
+              222,
+              60
+            ],
+            "confidence": 0.736328125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Reports",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 12,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 6,
+          "axMs": 9.032011032104492,
+          "captureMs": 0.8800029754638672,
+          "detected": 4,
+          "detectorMs": 10.484933853149414,
+          "observeMs": 26.380062103271484,
+          "ocr": 8,
+          "ocrMs": 7.832050323486328,
+          "visionMs": 10.522961616516113
+        },
+        "ocrText": [],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app . live clicks . independent result log",
+          "Workspace",
+          "Settings",
+          "Projects",
+          "Reports",
+          "Choose a workspace section"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Workspace",
+          "Choose a workspace section",
+          "Jev Loop Lab"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78234
+      },
+      "decision": {
+        "choice": "e3",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 1,
+        "probabilities": {
+          "e2": 0,
+          "BLOCKED": 0,
+          "DONE": 0,
+          "e4": 0,
+          "e0": 0,
+          "WAIT": 0,
+          "e3": 1,
+          "e5": 0
+        },
+        "decisionMs": 251.14891699999953,
+        "usage": {
+          "inputTokens": 846,
+          "outputTokens": 81,
+          "totalTokens": 927
+        }
+      },
+      "action": {
+        "actionMs": 0.015974044799804688,
+        "clicked": "e3",
+        "label": "Settings",
+        "point": [
+          370,
+          866
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 278.8984580000006,
+      "elapsedMs": 278.89999999999964
+    },
+    {
+      "step": 1,
+      "observation": {
+        "axText": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Current theme: Light",
+          "Jev Loop Lab"
+        ],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              228,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              251,
+              586,
+              16,
+              16
+            ],
+            "confidence": 0.2548828125,
+            "enabled": false,
+            "id": "e1",
+            "label": "",
+            "role": "AXButton",
+            "source": "omniparser+ax",
+            "value": ""
+          },
+          {
+            "box": [
+              274,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "this button also has an action to zoom the window",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              259,
+              831,
+              222,
+              60
+            ],
+            "confidence": 0.4345703125,
+            "enabled": true,
+            "id": "e3",
+            "label": "Light",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              529,
+              831,
+              222,
+              60
+            ],
+            "confidence": 0.67236328125,
+            "enabled": true,
+            "id": "e4",
+            "label": "Dark",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              797.77099609375,
+              849.9801025390625,
+              225.2197265625,
+              29.074951171875
+            ],
+            "confidence": 0.736328125,
+            "enabled": true,
+            "id": "e5",
+            "label": "Reports",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              263,
+              946,
+              342,
+              44
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e6",
+            "label": "Enable notifications",
+            "role": "AXCheckBox",
+            "source": "ax",
+            "value": "0"
+          },
+          {
+            "box": [
+              259,
+              1041,
+              222,
+              60
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e7",
+            "label": "Save settings",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              529,
+              1041,
+              222,
+              60
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e8",
+            "label": "Back",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          }
+        ],
+        "frame": 13,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 8,
+          "axMs": 11.335968971252441,
+          "captureMs": 22.62699604034424,
+          "detected": 4,
+          "detectorMs": 10.658979415893555,
+          "observeMs": 45.70496082305908,
+          "ocr": 8,
+          "ocrMs": 11.169075965881348,
+          "visionMs": 11.204004287719727
+        },
+        "ocrText": [
+          "Reports"
+        ],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app . live clicks . independent result log",
+          "Workspace",
+          "Settings",
+          "Projects",
+          "Reports",
+          "Choose a workspace section"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Appearance",
+          "Current theme: Light",
+          "Jev Loop Lab",
+          "Reports"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78234
+      },
+      "decision": {
+        "choice": "e7",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.93,
+        "probabilities": {
+          "e5": 0,
+          "DONE": 0.07,
+          "e3": 0,
+          "e8": 0,
+          "e4": 0,
+          "e2": 0,
+          "e6": 0,
+          "BLOCKED": 0,
+          "WAIT": 0,
+          "e0": 0,
+          "e7": 0.93
+        },
+        "decisionMs": 281.6096670000006,
+        "usage": {
+          "inputTokens": 1024,
+          "outputTokens": 105,
+          "totalTokens": 1129
+        }
+      },
+      "action": {
+        "actionMs": 0.028967857360839844,
+        "clicked": "e7",
+        "label": "Save settings",
+        "point": [
+          370,
+          1071
+        ]
+      },
+      "status": "running",
+      "settleObservations": 0,
+      "cycleMs": 330.0510409999997,
+      "elapsedMs": 608.9998329999999
+    },
+    {
+      "step": 2,
+      "observation": {
+        "axText": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Settings saved successfully",
+          "Theme: Light",
+          "Notifications: disabled",
+          "Jev Loop Lab"
+        ],
+        "bounds": [
+          220,
+          578,
+          900,
+          642
+        ],
+        "captureMode": "stream",
+        "detector": true,
+        "elements": [
+          {
+            "box": [
+              228,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e0",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              251,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": false,
+            "id": "e1",
+            "label": "",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              274,
+              586,
+              16,
+              16
+            ],
+            "confidence": 1,
+            "enabled": true,
+            "id": "e2",
+            "label": "this button also has an action to zoom the window",
+            "role": "AXButton",
+            "source": "ax",
+            "value": ""
+          },
+          {
+            "box": [
+              257.24365234375,
+              846.2477722167969,
+              228.076171875,
+              28.07574462890625
+            ],
+            "confidence": 0.490966796875,
+            "enabled": true,
+            "id": "e3",
+            "label": "Light",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.177734375,
+              845.9636840820312,
+              226.318359375,
+              28.3304443359375
+            ],
+            "confidence": 0.5673828125,
+            "enabled": true,
+            "id": "e4",
+            "label": "Dark",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              261.5351867675781,
+              961.0095825195312,
+              20.80535888671875,
+              18.2991943359375
+            ],
+            "confidence": 0.5107421875,
+            "enabled": true,
+            "id": "e5",
+            "label": "",
+            "role": "control",
+            "source": "omniparser",
+            "value": ""
+          },
+          {
+            "box": [
+              287,
+              960,
+              170,
+              15.000000000000037
+            ],
+            "confidence": 0.5,
+            "enabled": true,
+            "id": "e6",
+            "label": "Enable notifications",
+            "role": "text",
+            "source": "ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              259,
+              1011,
+              222,
+              60
+            ],
+            "confidence": 0.544921875,
+            "enabled": true,
+            "id": "e7",
+            "label": "Back",
+            "role": "AXButton",
+            "source": "omniparser+ax+ocr",
+            "value": ""
+          },
+          {
+            "box": [
+              527.72705078125,
+              1055.111328125,
+              227.4169921875,
+              28.83984375
+            ],
+            "confidence": 0.476806640625,
+            "enabled": true,
+            "id": "e8",
+            "label": "Back",
+            "role": "control",
+            "source": "omniparser+ocr",
+            "value": ""
+          }
+        ],
+        "frame": 14,
+        "freshFrame": true,
+        "metrics": {
+          "ax": 4,
+          "axMs": 2.823948860168457,
+          "captureMs": 20.429015159606934,
+          "detected": 5,
+          "detectorMs": 10.600924491882324,
+          "observeMs": 34.34300422668457,
+          "ocr": 10,
+          "ocrMs": 7.711052894592285,
+          "visionMs": 10.63692569732666
+        },
+        "ocrText": [
+          "Enable notifications",
+          "Back"
+        ],
+        "rawOCRText": [
+          "Jev Loop Lab",
+          "Jev Loop Lab",
+          "Local native app . live clicks . independent result log",
+          "Appearance",
+          "Light",
+          "Dark",
+          "Current theme: Light",
+          "Enable notifications",
+          "Save settings",
+          "Back"
+        ],
+        "text": [
+          "Jev Loop Lab",
+          "Local native app • live clicks • independent result log",
+          "Settings saved successfully",
+          "Theme: Light",
+          "Notifications: disabled",
+          "Jev Loop Lab",
+          "Enable notifications",
+          "Back"
+        ],
+        "title": "Jev Loop Lab",
+        "window": 78234
+      },
+      "decision": {
+        "choice": "DONE",
+        "provider": "openrouter",
+        "model": "typesafe/jev-1.13-20260917",
+        "probability": 0.98,
+        "probabilities": {
+          "e2": 0,
+          "BLOCKED": 0,
+          "DONE": 0.98,
+          "e8": 0.01,
+          "e4": 0,
+          "WAIT": 0,
+          "e3": 0,
+          "e0": 0,
+          "e7": 0.01,
+          "e6": 0,
+          "e5": 0
+        },
+        "decisionMs": 259.75274999999965,
+        "usage": {
+          "inputTokens": 1037,
+          "outputTokens": 104,
+          "totalTokens": 1141
+        }
+      },
+      "action": null,
+      "status": "done",
+      "settleObservations": 0,
+      "cycleMs": 294.7940829999998,
+      "elapsedMs": 903.8907920000001
+    }
+  ],
+  "elapsedMs": 904.0090829999999
+}

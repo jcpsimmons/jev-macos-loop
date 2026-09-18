@@ -1,0 +1,17 @@
+{
+  "native/Fixture.swift": "78e2424cf1cc8fbc823275c9961ef88a7c97b0a4b98d18ecb31210d19f36667d",
+  "native/Perception.swift": "892a0c0c006474d8bf5ea54ddba6d7d991c00d717b3983854ba38435d9425356",
+  "native/VerifyCalculator.swift": "bab555c78c90238d50ee6a2be5bf9f19753ad35925998068caa6de6e43846db5",
+  "package-lock.json": "0428532ad97a148c51a01141901ea3e3922005337104c9fefb8797ef87f2eee7",
+  "scripts/benchmark.mjs": "169292c6d2ffcb65e49047508f2bc0c8cbaa9691735523a6bd2a9cb99b1ff5fb",
+  "scripts/build.sh": "fa1015e75f649842859a3d41fb0bee26224ed9609cc7ca70d80170456456ce33",
+  "scripts/calculator.mjs": "bda9388b4d461505af1aeacbfacbc68de39ed1289e8fc8ed733ecc2b1bb4ed36",
+  "scripts/check-provider.mjs": "429404953916ffa7d9c69e9b2eb1f2f8bbd419613ad40b853064f682c8c5d4e0",
+  "scripts/export_model.py": "5b4adcdb3a3a38a84086d329169b838c324c7d0a003f5637ac5387e3470c3382",
+  "scripts/model-requirements.txt": "e628b208848ea23295f94335ec5eb48e09e3ab2cd6f6c60b71eaaee957836215",
+  "src/cli.mjs": "f8e8522935f6bf94b1d95c4a100bc61c999405c72852e713670f3275fd5efff3",
+  "src/decide.mjs": "c85261a87cbf11f6f1d86a1fe67e7c64924c372bdbacfc6f5185db6d4b36b2d1",
+  "src/loop.mjs": "a341e501730ecaad32b2e8efdf262957a0e2cfe6e2a11604515927a2c2d15fac",
+  "src/native.mjs": "259c303a5816427a8fae29bdb527b1390d524c19b6101dba383c44246879d9ba",
+  "src/providers.mjs": "0b4d0649f6f08dddfb47a46cdc50f574821e69dd0f1e03353df7f1a7a6f64ddd"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "jev-macos-loop",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "node --test",
+    "start": "node src/cli.mjs",
+    "benchmark": "node scripts/benchmark.mjs",
+    "check": "node --check src/cli.mjs && node --check src/decide.mjs && node --check src/loop.mjs && node --check src/native.mjs && node --check src/providers.mjs && node --check scripts/record-demo.mjs",
+    "check:provider": "node scripts/check-provider.mjs",
+    "record:demo": "node scripts/record-demo.mjs"
+  },
+  "dependencies": {
+    "ai": "7.0.105",
+    "dotenv": "17.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "description": "Native macOS AI computer use and GUI automation with Jev, OmniParser CoreML, Apple Vision OCR, and BYO tokens for OpenRouter, Vercel AI Gateway, or TypesafeAI.",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "macos",
+    "computer-use",
+    "gui-automation",
+    "desktop-automation",
+    "jev",
+    "omniparser",
+    "coreml",
+    "apple-vision",
+    "apple-silicon",
+    "accessibility",
+    "openrouter",
+    "vercel-ai-gateway",
+    "typesafeai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcpsimmons/jev-macos-loop.git"
+  },
+  "homepage": "https://github.com/jcpsimmons/jev-macos-loop#readme",
+  "bugs": {
+    "url": "https://github.com/jcpsimmons/jev-macos-loop/issues"
+  }
+}
